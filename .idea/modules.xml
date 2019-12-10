@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/sentivent-event-sentence-classification.iml" filepath="$PROJECT_DIR$/.idea/sentivent-event-sentence-classification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../sentivent_event_sentence_classification/.idea/sentivent-event-sentence-classification.iml" filepath="$PROJECT_DIR$/../sentivent_event_sentence_classification/.idea/sentivent-event-sentence-classification.iml" />
     </modules>
   </component>
 </project>
