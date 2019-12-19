@@ -1,0 +1,199 @@
+import webanno.custom.A_Event as Event;
+import webanno.custom.B_Participant as Participant;
+import webanno.custom.C_FILLER as Filler;
+    
+Event {
+
+	/* CSR/Brand */
+	a_Type = "CSR/Brand" ->
+		c_Participant.role = "Company_CSR/Brand" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Deal */
+	a_Type = "Deal" ->
+		c_Participant.role = "Goal" (!) | c_Participant.role = "Partner" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Dividend */
+	a_Type = "Dividend" ->
+		c_Participant.role = "Company_Dividend" (!) | c_Participant.role = "YieldRatio" (!) | c_Participant.role = "Amount_Dividend" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Payment" | b_Subtype = "YieldRaise" | b_Subtype = "YieldReduction" | b_Subtype = "YieldStable" ;
+
+	b_Subtype = "YieldRaise" ->
+		c_Participant.role = "HistoricalYieldRatio" (!) ;
+
+	b_Subtype = "YieldReduction" ->
+		c_Participant.role = "HistoricalYieldRatio" (!) ;
+
+	b_Subtype = "YieldStable" ->
+		c_Participant.role = "HistoricalYieldRatio" (!) ;
+
+	/* Employment */
+	a_Type = "Employment" ->
+		c_Participant.role = "Employer" (!) | c_Participant.role = "Employee" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TITLE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Start" | b_Subtype = "End" | b_Subtype = "Compensation" ;
+
+	b_Subtype = "Start" ->
+		c_Participant.role = "Replacing" (!) ;
+
+	b_Subtype = "End" ->
+		c_Participant.role = "Replacer" (!) ;
+
+	b_Subtype = "Compensation" ->
+		c_Participant.role = "Amount_Employment" (!) ;
+
+	/* Expense */
+	a_Type = "Expense" ->
+		c_Participant.role = "Amount_Expense" (!) | c_Participant.role = "Company_Expense" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Increase_Expense" | b_Subtype = "Decrease_Expense" | b_Subtype = "Stable_Expense" ;
+
+	b_Subtype = "Increase_Expense" ->
+		c_Participant.role = "HistoricalAmount_Expense" (!) ;
+
+	b_Subtype = "Decrease_Expense" ->
+		c_Participant.role = "HistoricalAmount_Expense" (!) ;
+
+	b_Subtype = "Stable_Expense" ->
+		c_Participant.role = "HistoricalAmount_Expense" (!) ;
+
+	/* Facility */
+	a_Type = "Facility" ->
+		c_Participant.role = "Facility" (!) | c_Participant.role = "Company_Facility" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Open" | b_Subtype = "Close" ;
+
+	/* FinancialReport */
+	a_Type = "FinancialReport" ->
+		c_Participant.role = "Reportee" (!) | c_Participant.role = "Result" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Beat" | b_Subtype = "Miss" | b_Subtype = "Stable_FinancialReport" ;
+
+	/* Financing */
+	a_Type = "Financing" ->
+		c_Participant.role = "Amount_Financing" (!) | c_Participant.role = "Financee" (!) | c_Participant.role = "Financer" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Investment */
+	a_Type = "Investment" ->
+		c_Participant.role = "Investee" (!) | c_Participant.role = "CapitalInvested" (!) | c_Participant.role = "Investor" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Legal */
+	a_Type = "Legal" ->
+		c_Participant.role = "Defendant" (!) |
+		d_FILLER.role = "ALLEGATION" (!) | d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Proceeding" | b_Subtype = "Conviction/Settlement" | b_Subtype = "Acquit" | b_Subtype = "Appeal" ;
+
+	b_Subtype = "Proceeding" ->
+		c_Participant.role = "Adjudicator" (!) | c_Participant.role = "Complainant" (!) ;
+
+	b_Subtype = "Conviction/Settlement" ->
+		c_Participant.role = "Adjudicator" (!) |
+		d_FILLER.role = "SENTENCE" (!) ;
+
+	b_Subtype = "Acquit" ->
+		c_Participant.role = "Adjudicator" (!) ;
+
+	b_Subtype = "Appeal" ->
+		c_Participant.role = "Adjudicator" (!) | c_Participant.role = "Complainant" (!) ;
+
+	/* Macroeconomics */
+	a_Type = "Macroeconomics" ->
+		c_Participant.role = "AffectedCompany" (!) | c_Participant.role = "Sector" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Merger/Acquisition */
+	a_Type = "Merger/Acquisition" ->
+		c_Participant.role = "Cost" (!) | c_Participant.role = "Target" (!) | c_Participant.role = "Acquirer" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) ;
+
+	/* Product/Service */
+	a_Type = "Product/Service" ->
+		c_Participant.role = "ProductService" (!) | c_Participant.role = "Producer" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Launch" | b_Subtype = "Cancellation/Recall" | b_Subtype = "Trial" ;
+
+	b_Subtype = "Trial" ->
+		c_Participant.role = "Trialer" (!) ;
+
+	/* Profit/Loss */
+	a_Type = "Profit/Loss" ->
+		c_Participant.role = "Amount_Profit/Loss" (!) | c_Participant.role = "Profiteer" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Increase_Profit/Loss" | b_Subtype = "Decrease_Profit/Loss" | b_Subtype = "Stable_Profit/Loss" ;
+
+	b_Subtype = "Increase_Profit/Loss" ->
+		c_Participant.role = "HistoricalAmount_Profit/Loss" (!) ;
+
+	b_Subtype = "Decrease_Profit/Loss" ->
+		c_Participant.role = "HistoricalAmount_Profit/Loss" (!) ;
+
+	b_Subtype = "Stable_Profit/Loss" ->
+		c_Participant.role = "HistoricalAmount_Profit/Loss" (!) ;
+
+	/* Rating */
+	a_Type = "Rating" ->
+		c_Participant.role = "Analyst" (!) | c_Participant.role = "Security_Rating" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "BuyOutperform" | b_Subtype = "SellUnderperform" | b_Subtype = "Hold" | b_Subtype = "Upgrade" | b_Subtype = "Downgrade" | b_Subtype = "Maintain" | b_Subtype = "PriceTarget" | b_Subtype = "Credit/Debt" ;
+
+	b_Subtype = "Upgrade" ->
+		c_Participant.role = "HistoricalRating" (!) ;
+
+	b_Subtype = "Downgrade" ->
+		c_Participant.role = "HistoricalRating" (!) ;
+
+	b_Subtype = "Maintain" ->
+		c_Participant.role = "HistoricalRating" (!) ;
+
+	b_Subtype = "PriceTarget" ->
+		c_Participant.role = "TargetPrice" (!) ;
+
+	/* Revenue */
+	a_Type = "Revenue" ->
+		c_Participant.role = "Amount_Revenue" (!) | c_Participant.role = "Company_Revenue" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Increase_Revenue" | b_Subtype = "Decrease_Revenue" | b_Subtype = "Stable_Revenue" ;
+
+	b_Subtype = "Increase_Revenue" ->
+		c_Participant.role = "HistoricalAmount_Revenue" (!) | c_Participant.role = "IncreaseAmount_Revenue" (!) ;
+
+	b_Subtype = "Decrease_Revenue" ->
+		c_Participant.role = "HistoricalAmount_Revenue" (!) | c_Participant.role = "DecreaseAmount_Revenue" (!) ;
+
+	b_Subtype = "Stable_Revenue" ->
+		c_Participant.role = "HistoricalAmount_Revenue" (!) ;
+
+	/* SalesVolume */
+	a_Type = "SalesVolume" ->
+		c_Participant.role = "Amount_SalesVolume" (!) | c_Participant.role = "Buyer" (!) | c_Participant.role = "GoodsService" (!) | c_Participant.role = "Seller" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Increase_SalesVolume" | b_Subtype = "Decrease_SalesVolume" | b_Subtype = "Stable_SalesVolume" ;
+
+	b_Subtype = "Increase_SalesVolume" ->
+		c_Participant.role = "HistoricalAmount_SalesVolume" (!) ;
+
+	b_Subtype = "Decrease_SalesVolume" ->
+		c_Participant.role = "HistoricalAmount_SalesVolume" (!) ;
+
+	b_Subtype = "Stable_SalesVolume" ->
+		c_Participant.role = "HistoricalAmount_SalesVolume" (!) ;
+
+	/* SecurityValue */
+	a_Type = "SecurityValue" ->
+		c_Participant.role = "Security_SecurityValue" (!) | c_Participant.role = "Price" (!) |
+		d_FILLER.role = "PLACE" (!) | d_FILLER.role = "TIME" (!) | d_FILLER.role = "CAPITAL" (!) |
+		b_Subtype = "Increase_SecurityValue" | b_Subtype = "Decrease_SecurityValue" | b_Subtype = "Stable_SecurityValue" ;
+
+	b_Subtype = "Increase_SecurityValue" ->
+		c_Participant.role = "HistoricalPrice" (!) | c_Participant.role = "IncreaseAmount_SecurityValue" (!) ;
+
+	b_Subtype = "Decrease_SecurityValue" ->
+		c_Participant.role = "DecreaseAmount_SecurityValue" (!) | c_Participant.role = "HistoricalPrice" (!) ;
+
+	b_Subtype = "Stable_SecurityValue" ->
+		c_Participant.role = "HistoricalPrice" (!) ;
+}

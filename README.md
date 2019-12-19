@@ -2,6 +2,11 @@
 Sentence-level event classification experiments for the SENTiVENT Event dataset.
 Baseline experiments meant for Journal of LRE dataset submission.
 
+## Install
+This depends on the package [SimpleTransformers](https://github.com/ThilinaRajapakse/simpletransformers).
+
+`pipenv install --python 3.7.5 simpletransformers torch pandas`
+
 ## Experiment requirements:
 ### Initial test-run:
 **Test-run goal**:
