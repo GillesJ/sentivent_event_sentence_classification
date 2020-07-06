@@ -1,0 +1,728 @@
+document_id	sentence_idx	text	types_event_unq	labels_pred	missclf	error	lexical cue	true label ambiguity	idiomatic context	ambiguous trigger	plausible new label	example worthy	new_pred
+aapl14	0	iPhone X ' s Dangerous Choice Of Market Share Or Profit	['Macroeconomics', 'Profit/Loss']	()	{'Macroeconomics', 'Profit/Loss'}	True	strong						False
+aapl14	1	The decision by Apple to price the iPhone X at one thousand dollars says a lot about Tim Cook ' s strategy for the iPhone going forwards .	['Product/Service']	('Product/Service',)	set()	False							False
+aapl14	2	Although the new iOS-powered handset has been pitched as the future of the smartphone , it ' s a future that will see market share falling , even as Apple maintains its profit margin .	['Product/Service', 'CSR/Brand', 'Macroeconomics', 'Profit/Loss']	('Macroeconomics', 'Profit/Loss')	{'Product/Service', 'CSR/Brand'}	True	weak						False
+aapl14	3	Thank to the teardown analysis by IHS Markit reported on by Reuters ' Stephen Nellis we know that the raw cost of the iPhone X is $ 357 .	['Expense']	('Expense',)	set()	False							False
+aapl14	4	Comparing that to the list price gives a gross profit margin of sixty-four percent .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+aapl14	5	Once you add in R & D costs , manufacturing , shipping , distribution , and other ancillary costs , the iPhone X should offer Apple the almost traditional forty percent margin on the final handset sale .	['SalesVolume', 'Expense', 'Profit/Loss']	('Expense', 'Profit/Loss')	{'SalesVolume'}	True	strong						False
+aapl14	6	That ' s a lot of margin to enjoy , and there ' s an argument that Apple could have sold more units had the price been lower .	['Product/Service', 'SalesVolume', 'Profit/Loss']	('SalesVolume',)	{'Product/Service', 'Profit/Loss'}	True	(weak, strong)						False
+aapl14	7	Putting aside stock issues , the iPhone X pricing suggests that Apple will continue to prize profit margins over unit sales and market share .	['Product/Service', 'SalesVolume', 'Macroeconomics', 'Profit/Loss']	('Macroeconomics', 'Profit/Loss', 'SalesVolume')	{'Product/Service'}	True	weak						False
+aapl14	8	2017 has seen modest growth in the overall smartphone market - IHS Markit has reported seven percent year-on-year grow - but Apple ' s growth has been lagging the growth of the market , with IHS reporting two percent growth in a similar period .	['FinancialReport', 'Macroeconomics']	('Macroeconomics', 'SalesVolume')	{'SalesVolume', 'FinancialReport'}	True	(weak, strong)						True
+aapl14	9	Tim Cook and his team are facing a similar decision to previous leading manufacturers such as Nokia , Blackberry , Palm , and others .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+aapl14	10	Get it wrong and the danger is Apple will slowly follow those companies into the technological history books .	[]	()	set()	False							False
+aapl14	11	The general trend on smartphone pricing has always experienced a downward pressure , and as the price drops more people buy into the system .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+aapl14	12	If the iPhone X had maintained the flagship price of previous years then unit sales and market share numbers could have risen this quarter and throughout 2018 .	['Product/Service', 'SalesVolume', 'Macroeconomics']	('Macroeconomics', 'SalesVolume')	{'Product/Service'}	True	weak	y					False
+aapl14	13	Instead Apple has chosen to maintain its profit margin .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+aapl14	14	That will keep the accountants and shareholders happy , but with no significant year-on-year growth in iPhone sales expected , there ' s every chance that 2017 and 2018 will see Apple lose market share to the competition .	['SalesVolume', 'Macroeconomics']	('Macroeconomics', 'SalesVolume')	set()	False							False
+aapl15	0	Here ' s how Apple gets to a $ 2 trillion market value	['FinancialReport']	('Macroeconomics',)	{'Macroeconomics', 'FinancialReport'}	True	strong	y					True
+aapl15	1	- Expect strongest growth from services and Asia	['FinancialReport']	()	{'FinancialReport'}	True	weak						False
+aapl15	2	Apple is currently the world ' s most-valuable company .	['Macroeconomics']	()	{'Macroeconomics'}	True	strong						False
+aapl15	3	Apple ' s market capitalization has topped $ 900 billion and seems on track to hit $ 1 trillion by year-end , with expectations for a strong holiday season .	['FinancialReport']	('Macroeconomics',)	{'Macroeconomics', 'FinancialReport'}	True		y					True
+aapl15	4	Apple stock is preforming in line with my 2015 prediction , a forecast I repeated again this April , when such a number seemed outlandish .	[]	()	set()	False							False
+aapl15	5	So , what will it take for Apple shares to warrant a $ 2 trillion market cap ?	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True	strong	y					True
+aapl15	6	Listen to Apple CEO Tim Cook and you ' ll hear a fair amount of Buck Rogers-sounding futurism : Artificial intelligence that allows for self-driving cars , augmented-reality technology which , demystified , is mostly a more realistic-looking gaming environment for now and more .	[]	()	set()	False							False
+aapl15	7	Or you can keep the case for $ 2 trillion simpler : Apple has an already world-class hardware business that sold $ 141.3 billion of iPhones in the year ending this September , while its services business is up to $ 30 billion a year , growing at 23 % .	['SalesVolume']	('SalesVolume',)	set()	False							False
+aapl15	8	` ` We expect a lot to happen with two to three years , and it will mostly be in services , ' ' CFRA Research analyst Angelo Zino says . ' '	[]	()	set()	False							False
+aapl15	9	The quickest way from $ 1 trillion to $ 2 trillion is to get a higher stock multiple on top of earnings growth .	['FinancialReport', 'Profit/Loss']	('Profit/Loss', 'SecurityValue')	{'FinancialReport', 'SecurityValue'}	True	(weak, strong)	y					True
+aapl15	10	The longer they grow services at 20 % or better , the better .	['Revenue']	('Product/Service',)	{'Product/Service', 'Revenue'}	True		y					True
+aapl15	11	Apple will get a better multiple as services become a bigger part of its pie . ' '	['FinancialReport', 'Revenue']	()	{'Revenue', 'FinancialReport'}	True	weak						False
+aapl15	12	The biggest differences between the prosaic case and the Buck Rogers case lie in how long it might take Apple to double in value .	['FinancialReport']	()	{'FinancialReport'}	True	weak		y				False
+aapl15	13	But here ' s what to think about when you ask , can Apple really get to $ 2 trillion ?	['FinancialReport']	()	{'FinancialReport'}	True	weak						False
+aapl15	14	First , watch services .	[]	()	set()	False							False
+aapl15	15	It ' s the most boring part of the case , but the most predictable , Zino says .	[]	()	set()	False							False
+aapl15	16	Right now , services are just 13 % of Apple ' s revenue , Zino says .	['Revenue']	('Revenue',)	set()	False							False
+aapl15	17	This could be a $ 60 billion business within four years , even with some slowing in growth .	['Revenue']	()	{'Revenue'}	True							False
+aapl15	18	Services could soon produce 20 % of Apple ' s revenue and a third of its profit , Zino predicts .	['Revenue', 'Profit/Loss']	('Profit/Loss', 'Revenue')	set()	False							False
+aapl15	19	Morgan Stanley ' s Katy Huberty adds that services could even grow 30 % annually if people demand virtual-reality games and other AR-based services .	['Macroeconomics', 'Revenue']	()	{'Revenue', 'Macroeconomics'}	True	weak						False
+aapl15	20	Services businesses also command higher multiples , as Zino points out .	['FinancialReport']	()	{'FinancialReport'}	True	strong						False
+aapl15	21	If we assume a $ 60 billion services business with 33 % profit margins , services alone would generate as much as $ 20 billion in profit .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+aapl15	22	Apple made $ 64.1 billion before taxes in fiscal 2017 .	['Profit/Loss']	('Revenue',)	{'Revenue', 'Profit/Loss'}	True	weak						True
+aapl15	23	That could be worth an extra several-hundred billion right there .	[]	()	set()	False							False
+aapl15	24	Second , watch China and Asia .	[]	()	set()	False							False
+aapl15	25	It ' s easy to get carried away by China ' s potential , Zino cautions .	[]	()	set()	False							False
+aapl15	26	Apple ' s sales to greater China dropped 17 % in fiscal 2016 and another 8 % in 2017 , thanks partly to the financial-market turmoil there .	['SalesVolume', 'Macroeconomics']	('Macroeconomics', 'SalesVolume')	set()	False							False
+aapl15	27	Apple ' s big issue in China is whether its consumers are rich enough to choose iPhones en masse .	[]	()	set()	False							False
+aapl15	28	Morgan Stanley ' s Huberty argues that Apple ' s China recovery , which began earlier this year , will be accelerated by a shift to more-expensive phones like the iPhone X .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+aapl15	29	She says Apple ' s strength selling products in China suggests the real problem has been a lack of a compelling new iPhone .	['Product/Service', 'SalesVolume']	()	{'Product/Service', 'SalesVolume'}	True	weak						False
+aapl15	30	` ` The number of aged iPhones in China due for an upgrade grew 56 % this year , setting up for accelerating upgrades when a new iPhone form factor launches this fall , ' ' Huberty wrote in August .	['Product/Service']	('Product/Service', 'SalesVolume')	{'SalesVolume'}	True							True
+aapl15	31	` ` What ' s more , the switching opportunity from rival phone makers is ripe in China . . . .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+aapl15	32	The combination of these factors drives our 66 % bottom-up China iPhone unit growth forecast in FY18 . ' '	['SalesVolume']	('SalesVolume',)	set()	False							False
+aapl15	33	Boosting China unit sales by two-thirds would add $ 30 billion in revenue , even if it took longer than a year .	['SalesVolume', 'Revenue']	('Revenue', 'SalesVolume')	set()	False							False
+aapl15	34	Apple trades at four times sales , so add about $ 120 billion to market cap for that alone .	['FinancialReport', 'SecurityValue']	('SecurityValue',)	{'FinancialReport'}	True							False
+aapl15	35	Third , watch the tax bill .	[]	()	set()	False							False
+aapl15	36	With $ 252.3 billion in cash held outside of the U.S . , Apple stands to be the biggest beneficiary of Republican proposals to let companies repatriate offshore funds while paying only 10 % as U.S . taxes , well below today ' s rate of 35 % .	[]	()	set()	False							False
+aapl15	37	The other thing to watch is the proposal to cut the corporate tax rate to 20 % on U.S . profits .	['Expense']	()	{'Expense'}	True							False
+aapl15	38	Apple pays just 25 % now , so a rate cut is n't likely to be a bonanza for Apple , but it would help .	['Expense']	()	{'Expense'}	True							False
+aapl15	39	Fourth , watch the car revolution , but do n't count on it .	[]	()	set()	False							False
+aapl15	40	No one knows what Apple will do about cars , Zino says - - but it could be huge .	[]	()	set()	False							False
+aapl15	41	No surprise why : Loup Ventures , co-founded by longtime Apple analyst Gene Munster , says the car market will see more change in the next 20 years than in the last 50 .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+aapl15	42	Nearly all new cars and light trucks will be electric-powered and mostly or completely self-driving by 2040 , Loup predicts .	[]	()	set()	False							False
+aapl15	43	Apple probably wo n't make cars , but Zino and Morgan Stanley ' s Huberty both see Apple trying to become a major player in the software and services that make autonomous vehicles and driverless-car services practical .	['Product/Service', 'Macroeconomics']	('Macroeconomics',)	{'Product/Service'}	True							False
+aapl15	44	Will Apple ' s ideas outshine Alphabet ' s or Uber ' s ?	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+aapl15	45	No one knows .	[]	()	set()	False							False
+aapl15	46	Also , Loup ' s forecast suggests the shift toward autonomous cars will be fairly backloaded , hitting critical mass in the 2030s - - likely too late to drive the climb toward Apple ' s $ 2 trillion valuation .	['FinancialReport', 'Macroeconomics']	('SecurityValue',)	{'Macroeconomics', 'FinancialReport', 'SecurityValue'}	True							True
+aapl15	47	The best play is to hold Apple shares if you like the iPhone business , and be patient with the rest .	['Rating']	()	{'Rating'}	True							False
+aapl15	48	That services will grow steadily is close to a lock .	['Revenue']	()	{'Revenue'}	True							False
+aapl15	49	If a tax bill passes , it will help some .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+aapl15	50	With Bank of America Merrill Lynch saying Asian emerging markets face several years of growth before another recession , that rebound in Asia is another decent bet .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+aapl15	51	Those positives outweigh the fact that the futuristic Buck Rogers stuff may take a while .	[]	()	set()	False							False
+aapl15	52	If AR and AI do become huge , they ' ll push Apple toward $ 3 trillion or more - - even if that now sounds like to infinity and beyond .	['FinancialReport']	('Macroeconomics',)	{'Macroeconomics', 'FinancialReport'}	True					y		True
+aapl16	0	Apple ' s App Store Generated Over $ 11 Billion In Revenue For the Company Last Year	['Revenue']	('Revenue',)	set()	False							False
+aapl16	1	Apple reported that its App Store generated over $ 26.5 billion in revenue for developers in 2017 , which was up about 30 % year over year .	['Revenue']	('Revenue',)	set()	False							False
+aapl16	2	This means that the App Store created approximately $ 11.5 billion in revenue for the company .	['Revenue']	('Revenue',)	set()	False							False
+aapl16	3	Growth of Services revenue is one of the major positive points for investors since it is growing faster than the rest of the company with higher margins .	['Revenue', 'Profit/Loss']	('Macroeconomics', 'Profit/Loss', 'Revenue')	{'Macroeconomics'}	True	weak	y					True
+aapl16	4	( Note that I own Apple shares and have sold Put options ) .	[]	()	set()	False							False
+aapl16	5	Below is an analysis of Apple ' s App Store revenue that can be gleaned from the past four press releases providing App Store data .	[]	()	set()	False							False
+aapl16	6	Note that when I use words such as ` ` over ' ' or ` ` nearly ' ' they are from the press releases and when I use ` ` about ' ' or ` ` approximately ' ' they are based on calculations I have done from the numbers in them .	[]	()	set()	False							False
+aapl16	7	Calendar 2014	[]	()	set()	False							False
+aapl16	8	Total spending in the App Store was approximately $ 15 billion	['SalesVolume']	('Expense',)	{'Expense', 'SalesVolume'}	True	strong	y		y			True
+aapl16	9	Developers received over $ 10 billion in revenue	['Revenue']	('Revenue',)	set()	False							False
+aapl16	10	Apple ' s revenue was about $ 4.5 billion	['Revenue']	('Revenue',)	set()	False							False
+aapl16	11	The first week of January generated nearly $ 500 million in billings	['SalesVolume']	('Revenue',)	{'SalesVolume', 'Revenue'}	True	weak	y		y			True
+aapl16	12	January 1st was the largest day	[]	()	set()	False							False
+aapl16	13	Calendar 2015	[]	()	set()	False							False
+aapl16	14	Total spending in the App Store was over $ 20 billion	['SalesVolume']	('Expense', 'Macroeconomics')	{'Expense', 'SalesVolume', 'Macroeconomics'}	True	strong			y			True
+aapl16	15	Cumulative developer revenue reached nearly $ 40 billion since 2008 with over one-third in 2015	['Revenue']	('Revenue',)	set()	False							False
+aapl16	16	Developers received about $ 14 billion in revenue , up approximately 35 % year over year	['Revenue']	('Revenue',)	set()	False							False
+aapl16	17	Apple ' s revenue was about $ 6 billion , up about 33 % year over year	['Revenue']	('Revenue',)	set()	False							False
+aapl16	18	The two weeks ending on January 3 , 2016 , generated $ 1.1 billion in spending	['SalesVolume']	('Macroeconomics',)	{'SalesVolume', 'Macroeconomics'}	True	weak						True
+aapl16	19	January 1st saw $ 144 million in total spending	['SalesVolume']	('Macroeconomics',)	{'SalesVolume', 'Macroeconomics'}	True							True
+aapl16	20	Calendar 2016	[]	()	set()	False							False
+aapl16	21	Total spending in the App Store was just shy of $ 30 billion	['SalesVolume']	('Expense',)	{'Expense', 'SalesVolume'}	True							True
+aapl16	22	Developers received over $ 20 billion for the year and now over $ 60 billion since 2008	['Revenue']	('Expense',)	{'Expense', 'Revenue'}	True							True
+aapl16	23	Apple ' s revenue was about $ 8.8 billion , up 49 % year over year	['Revenue']	('Revenue',)	set()	False							False
+aapl16	24	Developer ' s and Apple ' s revenue have both almost doubled in two years	['Revenue']	('Revenue',)	set()	False							False
+aapl16	25	January 1st had nearly $ 240 million spent that day $ 72 million to Apple	['SalesVolume']	('Expense',)	{'Expense', 'SalesVolume'}	True							True
+aapl16	26	For calendar 2016 the App Stores $ 8.8 billion in revenue was about 4 % of the company ' s $ 216 billion in total revenue and a third of the $ 25 billion in Services revenue .	['Revenue']	('Revenue',)	set()	False							False
+aapl16	27	The almost $ 3 billion increase in App Store revenue made a small dent in Apple ' s total revenue drop of about $ 18 billion .	['Revenue']	('Revenue',)	set()	False							False
+aapl16	28	However if it continues to increase at the same rate it does add almost 1.5 percentage points to the company ' s total revenue growth for the next few years .	['Revenue']	('Revenue',)	set()	False							False
+aapl16	29	Calendar 2017	[]	()	set()	False							False
+aapl16	30	January 1st had $ 300 million spent that day , up 25 % year over year	['SalesVolume']	('Expense',)	{'Expense', 'SalesVolume'}	True							True
+aapl16	31	$ 890 million spent over the 7 days from Christmas Eve to New Years Eve	['SalesVolume']	('Expense',)	{'Expense', 'SalesVolume'}	True							True
+aapl16	32	Developers received $ 26.5 billion for the year , up 30 % year over year , and is now over $ 86 billion since 2008	['Revenue']	('Employment', 'Expense')	{'Expense', 'Employment', 'Revenue'}	True							True
+aapl16	33	For calendar 2017 the App Stores approximate $ 11.4 billion in revenue was almost 5 % of the company ' s projected $ 237 billion in total revenue and over a third of the $ 31 billion in forecasted Services revenue .	['Revenue']	('Revenue',)	set()	False							False
+amzn12	0	Is Amazon getting into the pharmacy business ? This is what you need to know	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+amzn12	1	Drugstore chains and pharmacy-benefit managers are likely at risk , Wall Street analysts say	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+amzn12	2	Amazon.com : books , music , movies , apparel , food - - and prescription medicine ?	[]	()	set()	False							False
+amzn12	3	A report earlier this year that the massive online retailer was mulling a pharmaceutical-industry entry has had observers all aflutter .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn12	4	Amazon ' s nearly $ 14 billion acquisition of Whole Foods , announced in June and closed just over two months later , sparked speculation that the grocery chain might soon house pharmacy locations .	['Facility', 'Merger/Acquisition']	('Merger/Acquisition',)	{'Facility'}	True	strong		y				False
+amzn12	5	Though Amazon itself has not confirmed a potential expansion into pharmaceuticals , the possibility has sent stocks of pharmaceutical middlemen south on more than one occasion .	['Macroeconomics', 'SecurityValue']	()	{'Macroeconomics', 'SecurityValue'}	True			y				False
+amzn12	6	` ` Amazon has shown that they have mastery of the technology and innovative approaches to really transform how the marketplace delivers product , ' ' said Linda Pissott Reig , who co-chairs the FDA section of the Pittsburgh-based law firm Buchanan , Ingersoll & Rooney PC .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+amzn12	7	The move could also have wider implications for consumers .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+amzn12	8	Amazon could use de-identified big data to then see if , for example , ` ` a patient with depression is also seeking out self-help books , or particular products , ' ' she said .	[]	()	set()	False							False
+amzn12	9	` ` Amazon , with a giant marketplace , has a lot of ability to collect information . ' '	[]	()	set()	False							False
+amzn12	10	Why the prospect of Amazon ' s entry to this new market is important : After transforming such industries as publishing , consumer electronics and cloud services - - and decimating key players along the way - - Amazon has built a reputation for dominance .	['CSR/Brand', 'Macroeconomics']	('Macroeconomics',)	{'CSR/Brand'}	True	strong		y				False
+amzn12	11	But part of the wide interest in an Amazon pharmacy is that the highly regulated drug business has never been particularly transparent .	[]	()	set()	False							False
+amzn12	12	At best , U.S . drug pricing is complex ; at worst , it ' s dysfunctional .	[]	()	set()	False							False
+amzn12	13	Those who are skeptical of Amazon ' s potential pharmacy entry have noted Amazon ' s difficulty breaking into highly regulated markets , including alcohol distribution in the U.S . Industry leaders have brought up similar points .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn12	14	For one , CVS Health Corp . Chief Executive Larry Merlo told Wall Street analysts in August that his industry was ` ` highly regulated , so the barriers to entry are high . ' '	[]	()	set()	False							False
+amzn12	15	CNBC , which first reported on Amazon ' s pharmacy plans in May , reported Friday that Amazon would make a decision before Thanksgiving .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak		y				False
+amzn12	16	Given that time table , expect the question to crop up again this earnings season .	[]	()	set()	False							False
+amzn12	17	What companies could be affected : Though Amazon ' s involvement could presumably affect any and all parts of the pharmaceutical supply chain , including drug makers , it ' s most threatening to retail pharmacy chains like Walgreens Boots Alliance and Wal-Mart Stores Inc . according to Leerink Partners analyst Ana Gupte .	['Macroeconomics']	()	{'Macroeconomics'}	True	strong		y				False
+amzn12	18	That ' s because Amazon is expected to begin getting cash-pay and mail-order customers , eventually moving into the pharmacy-benefits manager and retail pharmacy business , Gupte said .	['Product/Service', 'Macroeconomics']	()	{'Product/Service', 'Macroeconomics'}	True	weak		y				False
+amzn12	19	CVS , though , might be able to leverage its pharmacy-benefit manager unit to reduce its risk , said Leerink Partners analyst David Larsen .	[]	()	set()	False							False
+amzn12	20	Anticipated competition from Amazon could also prompt pharmacies to diversify their offerings , Morgan Stanley analyst Ricky Goldwasser said this summer , including offering lab services like blood tests .	['Product/Service', 'Macroeconomics']	('Macroeconomics', 'Product/Service')	set()	False							False
+amzn12	21	Middlemen called pharmacy-benefit managers ( PBMs ) , which work with drug makers to negotiate prices on behalf of health insurers and employers , are another player expected to be affected .	['Macroeconomics', 'Deal']	('Deal',)	{'Macroeconomics'}	True			y				False
+amzn12	22	They are not a well-known part of the U.S . pharmaceutical system but have come under scrutiny in the last year amid public outrage over drug costs .	['CSR/Brand']	('CSR/Brand', 'Expense')	{'Expense'}	True							True
+amzn12	23	Because PBMs negotiate discounts from drugs ' total cost , critics charge that they also push prices higher to make their discounts appear more favorable .	['CSR/Brand', 'Deal']	('Deal',)	{'CSR/Brand'}	True							False
+amzn12	24	Amazon poses ` ` both an opportunity and a threat ' ' for Express Scripts Holding Company , the largest stand-alone PBM , Gupte said .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn12	25	Express Scripts announced on Tuesday that it will buy privately-held medical benefit management company eviCore healthcare for $ 3.6 billion , a move that some saw as a response to the Amazon threat .	['Macroeconomics', 'Merger/Acquisition']	('Merger/Acquisition',)	{'Macroeconomics'}	True							False
+amzn12	26	Meanwhile , PBMs that are part of UnitedHealth Group and Humana Inc . will be more shielded , Gupte said .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak		y				False
+amzn12	27	Drug distributors such as McKesson Corp . , AmerisourceBergen Corp . and Cardinal Health Inc . will likely have less exposure in the near term , according to Leerink ' s Larsen .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn12	28	Reasons for skepticism : A recent report that Amazon had obtained approval to become a wholesale distributors in several states sent pharmaceutical supply chain stocks down again in late October .	['Product/Service', 'SecurityValue']	('Deal', 'SecurityValue')	{'Deal', 'Product/Service'}	True							True
+amzn12	29	But scrutiny of those approvals by the investment firm Jefferies found something important : Correspondence between two state pharmacy boards and Amazon showed that those state licenses could only be used for medical device and supplies distribution .	['Product/Service']	()	{'Product/Service'}	True	weak						False
+amzn12	30	That does n't rule out a pharmaceutical entry , but it does suggest that Amazon is starting with other , potentially easier medical products .	['Product/Service', 'Macroeconomics']	()	{'Product/Service', 'Macroeconomics'}	True							False
+amzn12	31	Mizuho analyst Ann Hynes is another skeptic .	[]	()	set()	False							False
+amzn12	32	Before acquiring Whole Foods this year , Amazon had talked about entering the grocery industry for more than a decade , Hynes noted .	['Macroeconomics', 'Merger/Acquisition']	('Macroeconomics', 'Merger/Acquisition')	set()	False							False
+amzn12	33	By contrast , Amazon has n't mentioned pharmacy on its earnings call in the past decade , Hynes said .	[]	()	set()	False							False
+amzn12	34	In addition , even after CNBC reported on the online retailer ' s purported plan , the company did not list any pharmacy-related jobs , Hynes said .	['Employment', 'Macroeconomics']	('Employment',)	{'Macroeconomics'}	True							False
+amzn12	35	And , if the company did decide to move into pharmacy , ` ` there is no obvious asset to buy , ' ' Hynes said .	['Macroeconomics', 'Merger/Acquisition']	()	{'Macroeconomics', 'Merger/Acquisition'}	True							False
+amzn12	36	Amazon would need to either build or buy pharmacy capabilities , Gupte said , and could target a smaller player like specialty pharmacy Avella or acquire a larger entity .	['Investment', 'Merger/Acquisition']	('Merger/Acquisition',)	{'Investment'}	True							False
+amzn12	37	Many companies might also want to partner with Amazon , Leerink ' s Gupte said , including the Blue Cross Blue Shield PBM unit Prime Therapeutics , ` ` to enhance its drug discounts and mail penetration . ' '	['Deal']	('Deal',)	set()	False							False
+amzn12	38	So might Express Scripts and Walgreens , Larsen said .	[]	()	set()	False							False
+amzn12	39	Walgreens shares fell 3.4 % in Oct . 9 trade after the CNBC report , CVS shares declined 3.5 % , Wal-Mart shares rose 2.7 % and shares of Express Scripts plummeted 4.9 % .	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn12	40	Shares of the companies have dropped 13.4 % , 11.7 % , risen 12.4 % and dropped 1.9 % over the last three months , respectively , compared with a 4.5 % rise in the S & P 500 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn13	0	Five Reasons Amazon Can Reach $ 1,500	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn13	1	Shares of Amazon ( AMZN ) are higher on Thursday , par for the course as the ecommerce giant has trounced many traditional retailers , and Cowen & Co . thinks they will keep rising still .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+amzn13	2	Analyst John Blackledge and his team reiterated an Outperform rating on the stock today and raised their price target from $ 1,225 to $ 1,500 , calling it their best idea for 2018 .	['Rating']	('Rating',)	set()	False							False
+amzn13	3	Although Amazon has already been on a tear this year , rising nearly 55 % since the start of 2017 , they think that the stock will be able to keep climbing , thanks to catalysts across its business , from the cloud to ecommerce .	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn13	4	They city five main drivers in their note :	[]	()	set()	False							False
+amzn13	5	` ` ( i ) Further B2C eCommerce market share gains in large retail verticals like Apparel , Consumables , & Food & Bev Grocery , key drivers of the eCommerce business near and intermediate term ;	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn13	6	( ii ) Emerging eCommerce verticals like B2B , where AMZN recently introduced Prime for Business for small businesses to enterprise customers , signaling its emergent position in the estimated ~ $ 1.1 TN US , UK and German B2B eCommerce markets .	['Product/Service', 'Macroeconomics']	('Macroeconomics', 'Product/Service')	set()	False							False
+amzn13	7	AMZN ' s current US B2B product mix is diverse , offering Medical Supplies to Precision Parts to Consumables / Groceries with ability to service the opportunity within existing fulfillment infrastructure ;	[]	()	set()	False							False
+amzn13	8	( iii ) Significant Int ' l opportunity in existing and newer markets like India $ 1.1 TN retail sales , ~ 1 % eCom penetration , Mexico $ 426BN retail sales , ~ 2 % eCom penetration , and Australia $ 253BN retail sales , 5 % eCom penetration ;	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+amzn13	9	( iv ) AWS is the market leader in Public Cloud with an $ 18BN revenue run-rate and ~ 25 % operating margins .	['Macroeconomics', 'Revenue', 'Profit/Loss']	('Macroeconomics', 'Profit/Loss', 'Revenue')	set()	False							False
+amzn13	10	AWS should enjoy years of secular tailwinds driving revenue CAGR of ~ 26 % ' 18 - ` 23 as workloads migrate to the Cloud ;	['Macroeconomics', 'Revenue']	('Revenue',)	{'Macroeconomics'}	True	strong		y				False
+amzn13	11	( v ) AMZN Advertising , while still nascent , offers a dual value prop , a revenue growth opportunity driven by great user targeting given vast 1P user data , and b significant margin opportunity . ' '	['Revenue', 'Profit/Loss']	('Profit/Loss', 'Revenue')	set()	False							False
+amzn13	12	They write that despite Amazon ' s rally , the market is still underestimating the company , as it ' s one of the few in the world that can add $ 100 billion or more in addressable opportunities by expanding into new markets domestically and internationally , while building its share in areas where it already competes .	['Macroeconomics', 'Revenue', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	{'Revenue'}	True	weak						False
+amzn13	13	They also see Amazon Prime as a long-term growth driver .	['FinancialReport']	()	{'FinancialReport'}	True	weak						False
+amzn13	14	( Earlier this week , Instinet said it was bullish about Amazon ' s apparel business as well . )	['Rating']	()	{'Rating'}	True	strong						False
+amzn13	15	Shares of Amazon are up 0.5 % to $ 1157.87 this afternoon .	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn13	16	The SPDR S & P Retail ETF XRT is higher as well .	['SecurityValue']	('SecurityValue',)	set()	False							False
+amzn14	0	Amazon sold more Echo Dots than any other item over the holidays	['SalesVolume']	('SalesVolume',)	set()	False							False
+amzn14	1	Alexa was the hottest gift on Amazon this holiday season .	[]	()	set()	False							False
+amzn14	2	The Echo Dot , which stars Amazon ' s cheerful virtual assistant , was the best-selling item on all of Amazon during the 2017 winter shopping period , the online-retail giant said in a release this week .	['SalesVolume']	('SalesVolume',)	set()	False							False
+amzn14	3	Millions of Echo Dot devices were sold worldwide - - more than any other item by any manufacturer in any category on the site .	['SalesVolume']	()	{'SalesVolume'}	True	strong						False
+amzn14	4	Tens of millions of Alexa-enabled devices - - which includes the Echo Dot - - were sold on Amazon overall , the company said .	['SalesVolume']	('SalesVolume',)	set()	False							False
+amzn14	5	Some models , like the new Echo Spot , the Echo Dot , and Echo Buttons accessories sold out , and are now only available for post-holiday pre-order .	['SalesVolume']	('Product/Service',)	{'Product/Service', 'SalesVolume'}	True	strong	y		y	y		True
+amzn14	6	The Fire TV Stick with Alexa Voice Remote , a streaming device , was also a popular buy .	['CSR/Brand']	('Rating',)	{'Rating', 'CSR/Brand'}	True	strong			y		y	True
+amzn14	7	If we are conservative and estimate that Amazon sold 20 million of its best seller , the Echo Dot , at the holiday sale price of $ 29.99 , that would equal around $ 600 million in sales , research firm Nomura ' s Instinet said in a report .	['Product/Service', 'SalesVolume']	('SalesVolume',)	{'Product/Service'}	True	weak						False
+amzn14	8	The number may be even higher give that other Echo devices , like the Show and Spot , cost upwards of $ 200 and $ 100 , respectively .	['Product/Service']	()	{'Product/Service'}	True	weak						False
+amzn14	9	Amazon ' s markdowns and more affordable options may have helped introduce Alexa to more homes this holiday season .	['SalesVolume']	('Product/Service',)	{'Product/Service', 'SalesVolume'}	True							True
+amzn14	10	The Echo Dot , which usually sells for $ 50 and is the cheapest Echo device on the market , was on sale for $ 29.99 during the holidays - - a 40 % discount .	['Product/Service']	('Product/Service',)	set()	False							False
+amzn14	11	The regular echo was marked down to $ 79.99 .	['Product/Service']	()	{'Product/Service'}	True							False
+amzn14	12	And the Echo Spot was introduced this year as a more affordable and compact version of the Echo Show , which has camera and video capabilities .	['Product/Service']	('Product/Service',)	set()	False							False
+ba14	0	Boeing ' s Low-Altitude Bid	['Merger/Acquisition']	()	{'Merger/Acquisition'}	True	weak						False
+ba14	1	Boeing Co . ' s purported bid for Embraer SA looks low .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	2	Boeing has been aggressively pursuing a takeover of the Brazilian regional jet maker , a remarkable shift for a company that dubbed a similar combination struck by Airbus SE and Bombardier Inc . in October ` ` a questionable deal ' ' that would n't force it to change its strategic path .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	3	Many details are still being sorted , the most important being whether the Brazilian government , which has veto power , will support an acquisition .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	4	But at least one thing has reportedly been worked out : the price .	[]	()	set()	False							False
+ba14	5	According to the Wall Street Journal , Boeing and Embraer have informally agreed to a deal at . . . $ 28 a share .	['Deal', 'Merger/Acquisition']	('Deal',)	{'Merger/Acquisition'}	True	weak						False
+ba14	6	That ' s hardly the ` ` relatively large ' ' premium that previous reports had indicated was coming .	[]	()	set()	False							False
+ba14	7	A bid of $ 28 would be 40 percent higher than where Embraer was trading before news emerged of Boeing ' s interest .	['Merger/Acquisition', 'SecurityValue']	('Deal', 'Investment', 'Merger/Acquisition', 'SecurityValue')	{'Deal', 'Investment'}	True							True
+ba14	8	That ' s not insignificant , but also not atypical in M & A , especially lately .	['Merger/Acquisition']	()	{'Merger/Acquisition'}	True							False
+ba14	9	It ' s also worth noting that Embraer ' s stock had taken a hit this fall as the company faced the prospect of heightened competition from the Bombardier-Airbus combination , a problem it could better handle as part of Boeing .	['Macroeconomics', 'Merger/Acquisition', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	{'Merger/Acquisition'}	True							False
+ba14	10	Falling Short	[]	()	set()	False							False
+ba14	11	Investors were clearly expecting more .	[]	()	set()	False							False
+ba14	12	The American depositary receipts had climbed to about $ 27 heading into Friday , a level that ' s untenable if the ultimate price is just $ 1 higher because the deal has n't even officially been inked yet and faces significant regulatory hurdles .	['Legal', 'Merger/Acquisition', 'Deal', 'SecurityValue']	('Deal',)	{'Legal', 'Merger/Acquisition', 'SecurityValue'}	True							False
+ba14	13	Thus , news of the price sent Embraer ' s ADRs plummeting as much as 7 percent .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba14	14	Shareholders had every right to be more optimistic .	[]	()	set()	False							False
+ba14	15	Embraer is a crown jewel for Brazil .	['CSR/Brand']	()	{'CSR/Brand'}	True							False
+ba14	16	While Boeing is still negotiating with the government over what would happen with Embraer ' s defense business and how much say politicians would have going forward , a hefty offer was assumed to be part of its argument .	['Deal']	('Deal',)	set()	False							False
+ba14	17	The regional-jet hole in Boeing ' s lineup has been laid bare by its trade dispute with Bombardier over claims the Canadian company used low prices to unfairly compete for a Delta Air Lines Inc . order for which Boeing was n't even a contender .	['Legal']	('Deal', 'Macroeconomics')	{'Deal', 'Macroeconomics', 'Legal'}	True							True
+ba14	18	If Boeing is serious about catching up to the new Airbus-Bombardier union , it does n't have many other options that match the scale of Embraer .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+ba14	19	And yet Boeing ' s offer values Embraer ' s ADRs at a discount to the median multiple paid in major aerospace and defense deals over the past decade , according to data compiled by Bloomberg .	['Merger/Acquisition', 'SecurityValue']	('SecurityValue',)	{'Merger/Acquisition'}	True	weak						False
+ba14	20	Takeovers targets of more than $ 1 billion have typically commanded about 13 times Ebitda .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	21	Relatively ( Not ) Large	[]	()	set()	False							False
+ba14	22	Boeing ' s reported bid for Embraer is just a modest bump up from where the company had already climbed on news of its interest .	['Merger/Acquisition', 'SecurityValue']	('Deal', 'Merger/Acquisition', 'SecurityValue')	{'Deal'}	True	weak						True
+ba14	23	The valuation wo n't take your breath away .	[]	()	set()	False							False
+ba14	24	Not all of the acquisitions in this industry are perfect comparisons ; Embraer has no hope of fetching the kind of pricey valuation that higher-margin avionics supplier Rockwell Collins Inc . did from United Technologies Corp . last year , for example .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	25	But Lockheed Martin Corp . paid 13 times Ebitda to acquire helicopter maker Sikorsky from United Technologies in 2015 , or a little over 10 times if you adjust for the benefits of tax maneuver .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	26	Something in that ranges seems more reasonable for Embraer .	[]	()	set()	False							False
+ba14	27	Boeing still has work to do to secure an Embraer acquisition .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba14	28	Perhaps that should include re-evaluating the price .	[]	()	set()	False							False
+ba14	29	The Brazilian government is n't the only stakeholder it has to please .	[]	()	set()	False							False
+ba15	0	Should Boeing Buy GE Aviation ?	['Merger/Acquisition']	('Rating',)	{'Rating', 'Merger/Acquisition'}	True	strong			y		y	True
+ba15	1	Boeing ( BA ) was the Dow Jones Industrial Average ' s best-performing stock in 2017 , and it ' s gained nearly 20 % so far in 2018 .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+ba15	2	After such a monster runup , investors may be asking how the airplane maker can keep the rally going .	['SecurityValue']	()	{'SecurityValue'}	True	strong		y				False
+ba15	3	Melius Research ' s Scott Davis thinks that mergers and acquisitions may be the answer .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba15	4	He reiterated his Buy-Accumulate rating on Boeing and raised his price target to $ 500 Wednesday , writing that the company is still in the early innings of what he believes is a ` ` once-in - 50 - year transformation ' ' on a wide scale that will make it a higher-return business with lower risk .	['Rating', 'Profit/Loss']	('Rating',)	{'Profit/Loss'}	True	weak						False
+ba15	5	While Boeing is making major changes in terms of its businesses , Davis thinks that some strategic M & A could complement these efforts .	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba15	6	While Boeing has been rumored to be on the hunt for some time , he believes that the company may finally be about to make a move .	[]	()	set()	False							False
+ba15	7	And what ' s the old saying - - go big or go home ?	[]	()	set()	False							False
+ba15	8	He sees the former happening , and what better big move , he asks , than buying General Electric ' s ( GE ) GE Aviation unit ?	['Merger/Acquisition']	('Merger/Acquisition',)	set()	False							False
+ba15	9	He writes that it may not be the easiest deal to swallow , but Boeing can afford it , and if it could overcome regulatory and antitrust objections , it could be ` ` groundbreaking . ' '	['Legal', 'Merger/Acquisition']	()	{'Legal', 'Merger/Acquisition'}	True	(strong, weak)			y			False
+ba15	10	GE , the worst-performing stock in the Dow last year , certainly could be persuaded to part with GE Aviation , and Davis believes that the Trump administration is ` ` Boeing-friendly ' ' and that the synergies of such a deal ` ` would be gigantic . ' '	['Macroeconomics', 'Merger/Acquisition', 'SecurityValue']	('Merger/Acquisition',)	{'Macroeconomics', 'SecurityValue'}	True	(strong, weak)						False
+ba15	11	Boeing is up 0.2 % in early trading .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba15	12	The SPDR S & P Aerospace & Defense ETF ( XAR ) is flat .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	0	Boeing ' s stock contributes about 10 % of the Dow ' s 1,030 - point tumble	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	1	Shares of Boeing Co . were exacting the biggest toll on the Dow Jones Industrial Average on Thursday .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	2	The plane manufacturer , which has been the most influential component of the price-weighted Dow was contributing almost 115 points of the blue-chip average ' s drop .	['Macroeconomics', 'SecurityValue']	('SecurityValue',)	{'Macroeconomics'}	True	weak						False
+ba16	3	Boeing ' s shares were off 4.8 % , or 16.75 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	4	A $ 1 move in any one of the Dow ' s 30 components equates to a $ 6.83 - point slide in the benchmark .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	5	Shares of Caterpillar Inc . Goldman Sachs Group Inc . and Home Depot Inc . were also pushing the Dow decidedly lower by a combined 140 points .	['SecurityValue']	('SecurityValue',)	set()	False							False
+ba16	6	Meanwhile , the S & P 500 index ended 3.8 % at 2,582 , while the Nasdaq Composite Index closed 3.9 % lower at 6,777 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+bac04	0	Bank of America Earnings Hurt by Tax-Related Charge	['Profit/Loss']	('Legal', 'Profit/Loss')	{'Legal'}	True				y	y		True
+bac04	1	Bank of America has made a concerted effort to cut costs and focus on safer businesses such as lending to consumers with good credit .	['CSR/Brand', 'Expense']	('Expense',)	{'CSR/Brand'}	True	weak						False
+bac04	2	Above , customers use ATMs at a bank in New York .	[]	()	set()	False							False
+bac04	3	Bank of America has made a concerted effort to cut costs and focus on safer businesses such as lending to consumers with good credit .	['CSR/Brand', 'Expense']	('Expense',)	{'CSR/Brand'}	True							False
+bac04	4	Bank of America Corp . said a charge from the new U.S . tax law caused quarterly profit to fall by 48 % , even as the bank ended 2017 with its crisis-era issues firmly in the past .	['Macroeconomics', 'Profit/Loss']	('Legal', 'Profit/Loss')	{'Macroeconomics', 'Legal'}	True	weak			y			True
+bac04	5	The Charlotte , N.C . - based bank on Wednesday reported fourth-quarter profit of $ 2.37 billion , or 20 cents a share .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac04	6	That was down from $ 4.54 billion a year earlier .	['Profit/Loss']	('Revenue',)	{'Revenue', 'Profit/Loss'}	True	weak			y			True
+bac04	7	Without the $ 2.9 billion tax charge , however , the bank ' s profit would have risen to $ 5.3 billion , or 47 cents a share .	['Profit/Loss']	('Legal', 'Profit/Loss')	{'Legal'}	True	weak			y			True
+bac04	8	Analysts polled by Thomson Reuters had expected earnings of 44 cents a share on an adjusted basis .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac04	9	For the year , the bank posted a $ 21.1 billion profit , excluding the tax adjustment .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac04	10	That roughly matched the bank ' s all-time profit record from 2006 , when it was a simpler consumer-focused firm that had n't yet bought ailing mortgage lender Countrywide Financial Corp . or investment bank Merrill Lynch & Co .	['Merger/Acquisition', 'Profit/Loss']	('Merger/Acquisition',)	{'Profit/Loss'}	True	strong						False
+bac04	11	The bank ' s executives said Wednesday that the 2018 outlook is bright .	['FinancialReport']	()	{'FinancialReport'}	True	weak						False
+bac04	12	That is because the one-time hit from the tax bill is expected to be outweighed by the law ' s longer-term benefits .	['Macroeconomics', 'Profit/Loss']	()	{'Macroeconomics', 'Profit/Loss'}	True							False
+bac04	13	The fourth-quarter charge was largely due to the bank writing down its deferred tax assets .	['SecurityValue', 'Profit/Loss']	('Legal',)	{'Profit/Loss', 'Legal', 'SecurityValue'}	True							True
+bac04	14	These credits to offset future tax bills were created by past losses , in many cases huge ones racked up during the financial crisis .	['Expense', 'Profit/Loss']	()	{'Expense', 'Profit/Loss'}	True							False
+bac04	15	The assets generally lose value when tax rates fall .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+bac04	16	The bank expects its effective tax rate for 2018 to be 20 % , down from an expected 29 % before the new tax law , Chief Financial Officer Paul Donofrio said on a call with reporters Wednesday morning .	['FinancialReport']	('FinancialReport',)	set()	False							False
+bac04	17	Chief Executive Brian Moynihan said he expected most of the bank ' s benefit from the tax cut would go to shareholders , who should expect higher capital returns in the form of dividends or share buybacks .	['Dividend', 'Macroeconomics', 'Profit/Loss']	('Dividend',)	{'Macroeconomics', 'Profit/Loss'}	True							False
+bac04	18	Some of it will be spent on investments .	['Investment']	('Investment',)	set()	False							False
+bac04	19	Mr . Moynihan also reiterated that he expected tax changes would eventually lead to more loan growth .	['FinancialReport', 'Macroeconomics']	()	{'Macroeconomics', 'FinancialReport'}	True	(strong, weak)						False
+bac04	20	The benefits from the tax bill are expected to accelerate the progress Bank of America has made rebuilding its business after the financial crisis .	['Macroeconomics', 'Profit/Loss']	()	{'Macroeconomics', 'Profit/Loss'}	True							False
+bac04	21	As recently as 2014 , the lender ' s results were dogged by tens of billions of dollars in penalties over financial-crisis era issues .	['FinancialReport', 'Legal']	('Legal',)	{'FinancialReport'}	True							False
+bac04	22	Since then , the company ' s legal problems have eased , as Mr . Moynihan has made a concerted effort to cut costs and focus on safer businesses such as lending to consumers with good credit .	['CSR/Brand', 'Expense', 'Legal']	('Expense', 'Legal')	{'CSR/Brand'}	True							False
+bac04	23	The boost from the tax bill will expedite the bank ' s timeline for meeting long-held performance goals of a 1 % return on assets and a 12 % return on tangible common equity , Mr . Moynihan said .	['FinancialReport', 'Macroeconomics', 'Profit/Loss']	('Dividend',)	{'Macroeconomics', 'Profit/Loss', 'Dividend', 'FinancialReport'}	True							True
+bac04	24	Excluding the effect of the tax bill , those metrics stood at 0.9 % and 10.9 % in the fourth quarter .	['Profit/Loss']	('FinancialReport',)	{'Profit/Loss', 'FinancialReport'}	True							True
+bac04	25	The bank has recently had the help of rising interest rates , which are boosting profits .	['Profit/Loss']	('Macroeconomics', 'Profit/Loss')	{'Macroeconomics'}	True							True
+bac04	26	Bank of America ' s net-interest income was $ 11.46 billion , up about 11 % from a year earlier .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac04	27	It paid slightly higher rates to depositors in the quarter , though holders of regular savings accounts are still getting almost nothing in interest .	[]	('Dividend',)	{'Dividend'}	True				y			True
+bac04	28	The rate the bank paid on U.S . interest-bearing deposits was 0.27 % , compared with 0.24 % in the prior quarter .	[]	()	set()	False							False
+bac04	29	It also cut expenses to $ 54.74 billion on the year , coming closer to a $ 53 billion target the bank has set for 2018 .	['FinancialReport', 'Expense']	('Expense',)	{'FinancialReport'}	True	weak						False
+bac04	30	Revenue for the year rose 4 % to $ 87.4 billion .	['Revenue']	('Revenue',)	set()	False							False
+bac04	31	There were still some hiccups in the quarter .	[]	()	set()	False							False
+bac04	32	One was a $ 292 million charge related to ` ` a single-name non-U.S . commercial ' ' client in the fourth quarter .	['Profit/Loss']	('Legal',)	{'Profit/Loss', 'Legal'}	True							True
+bac04	33	A person familiar with the matter said this came from the bank ' s lending activity involving troubled firm Steinhoff International Holdings NV .	['Financing', 'Profit/Loss']	()	{'Financing', 'Profit/Loss'}	True							False
+bac04	34	JPMorgan Chase & Co . and Citigroup Inc . both took similar charges for loans involving the retailer , which is battling burgeoning financial problems after disclosing possible accounting irregularities .	['CSR/Brand', 'Financing', 'Profit/Loss']	('Financing', 'Legal')	{'Profit/Loss', 'Legal', 'CSR/Brand'}	True							True
+bac04	35	Trading revenue was another weak spot , as it has been for other large U.S . banks including Goldman Sachs Group Inc . .	['Revenue']	('Revenue',)	set()	False							False
+bac04	36	Excluding an accounting adjustment , Bank of America ' s trading revenue fell about 9 % to $ 2.66 billion from $ 2.91 billion in last year ' s fourth quarter , though that was less than the bank initially predicted .	['Revenue']	('FinancialReport', 'Revenue')	{'FinancialReport'}	True							True
+bac04	37	The lender ' s improving fortunes recently helped lift its stock above $ 30 a share for the first time since 2008 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+bac04	38	Shares are up more than 80 % since the 2016 presidential election , when hopes for deregulation , tax cuts and rate increases sent stocks in the sector higher .	['Macroeconomics', 'SecurityValue']	('SecurityValue',)	{'Macroeconomics'}	True							False
+bac04	39	Shareholders greeted Bank of America ' s latest results with caution , sending the bank ' s shares 0.8 % lower in morning trading .	['SecurityValue']	('SecurityValue',)	set()	False							False
+bac04	40	The bank had to issue so many new shares to deal with its crisis-era problems that per-share profits remain far below pre - 2008 levels .	['Profit/Loss', 'Financing']	('Financing', 'Profit/Loss')	set()	False							False
+bac04	41	And Bank of America still trades at a lower valuation than some competitors like JPMorgan Chase .	['SecurityValue']	('Macroeconomics', 'SecurityValue')	{'Macroeconomics'}	True							True
+bac05	0	BofA Includes Bitcoin Trust in Broader Ban on Investments	[]	()	set()	False							False
+bac05	1	Bank of America Corp . ' s Merrill Lynch told employees last month not to offer clients Grayscale ' s Bitcoin Investment Trust , one of the few financial instruments directly holding the digital coin , as the brokerage broadly eschews the virtual currency .	['Product/Service']	()	{'Product/Service'}	True	weak						False
+bac05	2	The firm - - already known to be refraining from offering bitcoin futures contracts - - told financial advisers not to pitch the fund or execute new client requests to buy into it , according to an excerpt of a Dec . 8 internal memo .	['Product/Service', 'Investment']	()	{'Investment', 'Product/Service'}	True	weak			y			False
+bac05	3	The bank is willing to maintain existing positions in brokerage accounts , but not in fee-based advisory accounts .	[]	()	set()	False							False
+bac05	4	The Wall Street Journal reported the decision earlier on Wednesday .	[]	()	set()	False							False
+bac05	5	Wall Street firms have broken ranks in recent weeks over whether to facilitate customers ' bets on bitcoin amid widespread concern that it ' s a bubble or that the cryptocurrency ' s price is potentially susceptible to manipulation .	['Product/Service', 'CSR/Brand']	()	{'Product/Service', 'CSR/Brand'}	True							False
+bac05	6	Bank of America is among brokerages that have held off on offering the futures introduced last month by Cboe Global Markets Inc . and CME Group Inc . .	['Product/Service']	('Product/Service',)	set()	False							False
+bac05	7	The bank issued its policy on the trust days before the initial futures contracts began trading on Dec . 10 .	[]	('Product/Service',)	{'Product/Service'}	True	Non-existent				y	y	True
+bac05	8	` ` The decision to close GBTC to new purchases is driven by concerns pertaining to suitability and eligibility standards of this product , ' ' executives wrote in the memo .	['Product/Service', 'CSR/Brand']	()	{'Product/Service', 'CSR/Brand'}	True							False
+bac05	9	The bank does n't offer retail clients any other bitcoin-linked products , according to a person with knowledge of the matter who asked not to be identified discussing company offerings .	['Product/Service']	()	{'Product/Service'}	True	strong						False
+bac06	0	Bank of America Hires Law Firm to Help Probe $ 292 Million Loss	['Employment', 'Deal', 'Profit/Loss']	('Deal', 'Employment', 'Legal')	{'Profit/Loss', 'Legal'}	True	(strong, weak)						True
+bac06	1	Bank of America has hired Davis Polk & Wardwell to look into a $ 292 million charge tied to a soured loan to the parent company of Mattress Firm and Sleepy ' s .	['Employment', 'Financing', 'Profit/Loss']	('Legal',)	{'Employment', 'Financing', 'Profit/Loss', 'Legal'}	True				y			True
+bac06	2	Bank of America Corp . has brought in an outside law firm to help examine a soured lending arrangement that led to a $ 292 million charge in last year ' s fourth quarter , according to people familiar with the matter .	['Employment', 'Deal', 'Profit/Loss', 'Financing']	('Employment', 'Legal')	{'Financing', 'Legal', 'Deal', 'Profit/Loss'}	True				y			True
+bac06	3	The losses sprang from financing involving troubled South African firm Steinhoff International Holdings SNH 8.66 % NV , the people said .	['Financing', 'Profit/Loss']	('Financing', 'Profit/Loss')	set()	False							False
+bac06	4	Bank of America is trying to figure out if the losses , which surfaced at many big global banks , could somehow have been avoided , the people said .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac06	5	The inquiry is being conducted by law firm Davis Polk & Wardwell LLP and began late last year , the people said .	[]	()	set()	False							False
+bac06	6	The law firm recently has interviewed Bank of America staff , some of the people added .	[]	('Employment',)	{'Employment'}	True					y		True
+bac06	7	Bank of America ' s board is being kept abreast of the inquiry , which is ongoing , some of the people said .	[]	()	set()	False							False
+bac06	8	` ` One of the reasons we have record-low credit losses is because we take the time to analyze what happened when things do n't go as planned and learn from it .	['Profit/Loss']	()	{'Profit/Loss'}	True	strong			y			False
+bac06	9	It ' s the responsible thing for a financial institution to do , ' ' a bank spokesman said .	['CSR/Brand']	()	{'CSR/Brand'}	True	weak						False
+bac06	10	Bank of America Chief Executive Brian Moynihan alluded to the inquiry on the bank ' s earnings call in January .	[]	()	set()	False							False
+bac06	11	` ` It is always a wake-up call that some things do n't turn out well , and we got to go back and what are lessons learned and what did we do right or wrong on that and how we avoid that in the future , ' ' Mr . Moynihan said of the loss .	[]	()	set()	False							False
+bac06	12	` ` We were n't happy with it , from the top of the house through to the actual people who were involved in it . ' '	[]	()	set()	False							False
+bac06	13	Bank of America was one of a number of global lenders that held pieces of a € 1.6 billion ( $ 2.0 billion ) loan to Christo Wiese , then chairman of the South African retailer .	['Financing']	('Financing',)	set()	False							False
+bac06	14	Mr . Wiese ' s shares in the company served as collateral for the financing .	['Financing']	('Financing',)	set()	False							False
+bac06	15	Those shares collapsed in value last fall after the retailer , which owns Mattress Firm and the Sleepy ' s brand , disclosed accounting irregularities .	['CSR/Brand', 'SecurityValue']	('CSR/Brand', 'SecurityValue')	set()	False							False
+bac06	16	The speed of the resulting share-price decline - - the stock was worth 120 % of the loan on Dec . 5 and less than 24 % two days later - - left banks few good options .	['SecurityValue']	('SecurityValue',)	set()	False							False
+bac06	17	In addition to Bank of America , Citigroup Inc . , JPMorgan Chase & Co . and Goldman Sachs Group disclosed losses to what was typically described as a single-name client in the fourth quarter .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac06	18	This client , people familiar with the matter said , was Steinhoff .	[]	()	set()	False							False
+bac06	19	The four banks booked a combined hit to fourth-quarter earnings of more than $ 1 billion .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+bac06	20	Bank of America ' s $ 292 million loss was the second-largest charge for the quarter and was spread across its global banking and markets divisions .	['Profit/Loss']	('Legal', 'Profit/Loss')	{'Legal'}	True							True
+bac06	21	That drove the bulk of loan-loss provisions in both units in the fourth quarter , a sign of both how large the Steinhoff loss was - - and how healthy the rest of the units ' portfolios were by contrast .	['Expense', 'Profit/Loss']	('Profit/Loss',)	{'Expense'}	True	weak	y					False
+bac06	22	Citigroup had the highest charge , described as up to $ 370 million .	['Profit/Loss']	('Legal',)	{'Profit/Loss', 'Legal'}	True							True
+bac06	23	The losses hit banks so quickly and broadly that many analysts have brushed off the charges as a one-time occurrence that is n't indicative of broader underwriting problems .	['CSR/Brand', 'Profit/Loss']	('Legal', 'Profit/Loss')	{'Legal', 'CSR/Brand'}	True	weak			y	y		True
+bac06	24	Still , Bank of America is looking to see how the exposure to Steinhoff came to be and how the bank can avoid similar problems in the future , the people familiar with the matter said .	['Investment', 'CSR/Brand']	()	{'Investment', 'CSR/Brand'}	True	weak	y					False
+bac06	25	Citigroup , Goldman Sachs , HSBC and Nomura put together the original loan to Mr . Wiese .	['Financing']	('Financing',)	set()	False							False
+bac06	26	Those banks sold off large chunks of their exposure to several other banks , including Bank of America .	['SalesVolume', 'Investment']	()	{'Investment', 'SalesVolume'}	True	weak	y					False
+bac06	27	The loan was made to a vehicle controlled by Mr . Wiese in September 2016 to help him fund a Steinhoff capital-raising needed to pay for one of its many acquisitions .	['Merger/Acquisition', 'Financing']	('Financing', 'Merger/Acquisition')	set()	False							False
+bac06	28	Mr . Wiese ' s vehicles pledged 628 million shares - - at that point worth $ 3.175 billion - - as collateral against the loan .	['Financing']	('Financing',)	set()	False							False
+bac06	29	In essence , Mr . Wiese borrowed against his Steinhoff shares to buy more Steinhoff shares .	['Financing']	('Financing',)	set()	False							False
+bac06	30	Such stock-based lending had been booming across the banking industry due to what was until recent days a long , low-volatility stock rally and the loans ' light capital requirements .	['SecurityValue', 'Financing']	('Macroeconomics', 'SecurityValue')	{'Financing', 'Macroeconomics'}	True				y	y		True
+bac06	31	Bank of America , which experienced major losses and fines in connection with the financial crisis , has become much more conservative in recent years across its businesses .	['CSR/Brand', 'Legal', 'Profit/Loss']	('CSR/Brand', 'Legal', 'Profit/Loss')	set()	False							False
+cvx04	0	Strong Crude Oil No Help for Chevron , Exxon Mobil	[]	()	set()	False							False
+cvx04	1	Nymex crude oil ended last week at $ 65.45 per barrel , up 8.9 % year to date , outperforming the gain of 3.2 % for the Dow Jones Industrial Average .	['Macroeconomics', 'SecurityValue']	('SecurityValue',)	{'Macroeconomics'}	True	weak						False
+cvx04	2	Chevron Corporation ( CVX ) and Exxon Mobil Corporation ( XOM ) are two ' ' Dogs of the Dow ' ' for 2018 , and they ended last week with Chevron shares down 5.3 % and Exxon Mobil shares up just 1.1 % year to date .	['SecurityValue']	('SecurityValue',)	set()	False							False
+cvx04	3	Chevron and Exxon Mobil both reported quarterly earnings on Friday , and both companies missed analysts ' expectations .	['FinancialReport']	('FinancialReport',)	set()	False							False
+cvx04	4	As ` ` Dogs of the Dow , ' ' what ' s more important than earnings is the strategy to buy weakness on brand-name dividend stocks .	[]	('SecurityValue',)	{'SecurityValue'}	True							True
+cvx04	5	Chevron has a dividend yield of 3.78 % , and Exxon Mobil has a dividend yield of 3.71 % , which make these stocks too cheap to ignore based on dividends .	['Dividend']	('Dividend',)	set()	False							False
+cvx04	6	However , the oil giants are not cheap looking at their P / E ratios .	[]	('SecurityValue',)	{'SecurityValue'}	True	na				y	y	True
+cvx04	7	Chevron ' s P / E is 34.52 , and Exxon Mobil ' s is 27.60 .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True	weak						True
+cvx04	8	The P / E for the Dow 30 is 26.85 .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True							True
+cvx04	9	The Weekly Chart for Crude Oil	[]	()	set()	False							False
+cvx04	10	The weekly chart for crude oil is positive but overbought , with oil above its five-week modified moving average of $ 62.67 .	['FinancialReport', 'Rating', 'SecurityValue']	()	{'Rating', 'FinancialReport', 'SecurityValue'}	True			y				False
+cvx04	11	Oil is also above its 200 - week simple moving average at $ 56.28 and has been above this ` ` reversion to the mean ' ' since the week of Dec . 29 , when the average was $ 57.34 .	['SecurityValue']	()	{'SecurityValue'}	True							False
+cvx04	12	The 12 x 3 x 3 weekly slow stochastic reading ended last week at 91.97 , above the overbought threshold of 80.00 and above 90.00 as an ` ` inflating parabolic bubble . ' '	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx04	13	Given this chart and analysis , my strategy is to buy oil on weakness to my monthly value level of $ 61.69 and to reduce holdings on strength to my weekly risky level of $ 67.60 .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True	strong	y					True
+cvx04	14	I show annual and quarterly pivots of $ 63.81 and $ 64.53 , respectively .	[]	()	set()	False							False
+cvx04	15	The Weekly Chart for Chevron	[]	()	set()	False							False
+cvx04	16	The weekly chart for Chevron is negative , with the stock below its five-week modified moving average of $ 123.50 and above its 200 - week simple moving average of $ 106.95 , which is the ` ` reversion to the mean , ' ' last tested during the week of Aug . 25 , when the average was $ 107.13 .	['FinancialReport', 'SecurityValue']	()	{'FinancialReport', 'SecurityValue'}	True							False
+cvx04	17	The 12 x 3 x 3 weekly slow stochastic reading is projected to slide to 68.49 this week , falling below the overbought threshold of 80.00 .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx04	18	Given this chart and analysis , I recommend buying Chevron shares on weakness to my semiannual value level of $ 98.73 and reducing holdings on strength to my monthly risky level of $ 129.72 .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True							True
+cvx04	19	The weekly chart for Exxon Mobil	[]	()	set()	False							False
+cvx04	20	The weekly chart for Exxon Mobil is projected to be negative at the end of this week if the stock closes the week below its five-week modified moving average of $ 84.90 and below its 200 - week simple moving average of $ 86.35 , which is the ` ` reversion to the mean . ' '	['FinancialReport', 'SecurityValue']	()	{'FinancialReport', 'SecurityValue'}	True							False
+cvx04	21	The 12 x 3 x 3 weekly slow stochastic reading is projected to end this week at 76.40 , falling below the overbought threshold of 80.00 .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx04	22	Given this chart and analysis , my strategy is to buy Exxon Mobil shares on weakness to my semiannual value level of $ 73.53 and to reduce holdings on strength to my quarterly and annual risky levels of $ 92.47 and $ 103.71 , respectively .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True							True
+cvx04	23	My monthly pivot is $ 84.82 .	[]	()	set()	False							False
+cvx05	0	Chevron ' s 10 - K Puts the Permian on a Pedestal	[]	()	set()	False							False
+cvx05	1	Shale helped the oil major replace reserves at a healthy pace last year .	['FinancialReport']	('Product/Service',)	{'Product/Service', 'FinancialReport'}	True	weak	y	y				True
+cvx05	2	Chevron Corp . is not shy about touting its 1.7 million acres of real estate in the prolific Permian basin , the center of the U.S . tight-oil boom .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+cvx05	3	And its annual filing , which dropped late Thursday , showed just how big the basin figures in one important respect : reserves .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx05	4	Replacing reserves is an obsession for oil majors ; it ' s hard to be an oil major for long if you do n't replenish what you pump .	[]	()	set()	False							False
+cvx05	5	According to its 10 - K , Chevron replaced 161 percent of its production organically - - before factoring in purchases and disposals - - a healthy figure after several pretty mediocre years :	['Product/Service', 'FinancialReport']	('FinancialReport',)	{'Product/Service'}	True	weak		y				False
+cvx05	6	Booked Up	[]	()	set()	False							False
+cvx05	7	Chevron ' s additions to proved reserves took a quantum leap in 2017 , relative to production	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx05	8	For that , Chevron can thank the U.S . and its Permian position in particular .	[]	()	set()	False							False
+cvx05	9	The company ' s home operations added almost 6 cubic feet of natural gas to proved reserves for every one produced and almost four barrels of oil for every one pumped out .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx05	10	Home Advantage	[]	()	set()	False							False
+cvx05	11	Chevron ' s U.S . operations powered the big jump in the company ' s reserve-replacement ratio in 2017 Note : Organic reserve-replacement ratio .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx05	12	By extension , Chevron can also thank OPEC , the Russians and a handful of other countries cutting supply and thereby pushing average benchmark U.S . oil prices up by about $ 7.40 a barrel last year .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+cvx05	13	Roughly a third of the additions last year were revisions to existing reserves , where oil and gas prices play a significant role ( because they can make reserves economically viable or unviable at any given year-end ) .	[]	()	set()	False							False
+cvx05	14	And a better price environment encourages oil and gas companies to get back to work ; Chevron drilled or participated in 310 wells in the Permian basin last year versus just 201 in 2016 .	['Facility', 'Macroeconomics']	('Macroeconomics', 'Product/Service')	{'Facility', 'Product/Service'}	True							True
+cvx05	15	Consequently , it added almost as many barrels of oil equivalent to its U.S . proved reserves via extensions and discoveries in 2017 as it did in the prior three years combined .	['FinancialReport']	('Product/Service',)	{'Product/Service', 'FinancialReport'}	True	weak	y	y		y		True
+cvx05	16	This was important , especially , in the crucial half of the reserves equation : oil .	[]	()	set()	False							False
+cvx05	17	Chevron ' s additions to lower-value natural gas reserves were split fairly evenly between the U.S . and international areas .	['FinancialReport']	()	{'FinancialReport'}	True							False
+cvx05	18	But in liquids , it was definitely a case of America first :	[]	()	set()	False							False
+cvx05	19	Texas Tea	[]	()	set()	False							False
+cvx05	20	Chevron ' s replacement of oil production in 2017 was dominated by the U.S . Note : Additions are organic reserve replacement , excluding purchases and disposals .	['FinancialReport', 'Macroeconomics']	()	{'Macroeconomics', 'FinancialReport'}	True	(strong, weak)						False
+cvx05	21	This shift toward home is n't confined to Chevron .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+cvx05	22	Exxon Mobil Corp . has n't filed its 10 - K yet , so details on reserves are scarce .	['FinancialReport']	()	{'FinancialReport'}	True	strong						False
+cvx05	23	Still , we know from its announcement earlier this month that about 800 million - - or almost a third of the 2.7 billion barrels of oil equivalent added to its proved reserves in 2017 - - came from its unconventional operations in the U.S . , mainly in the Permian basin .	['FinancialReport']	('Product/Service',)	{'Product/Service', 'FinancialReport'}	True					y		True
+cvx05	24	Chevron , however , has an advantage here .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+cvx05	25	It has been established in the Permian basin for a long time and consequently pays low or no royalties on its acreage there .	['Expense']	()	{'Expense'}	True	weak		y	y			False
+cvx05	26	Exxon , meanwhile , has been buying its way into the oil world ' s equivalent of Manhattan real estate , in part to help fill a project pipeline looking somewhat thin due to sanctions on Russia .	['Investment', 'Facility', 'Macroeconomics']	('Macroeconomics',)	{'Investment', 'Facility'}	True							False
+cvx05	27	Barclays estimates Exxon ' s average royalty rate in the Permian at about 20 percent , versus less than 10 percent for Chevron .	['FinancialReport', 'Expense']	()	{'Expense', 'FinancialReport'}	True							False
+cvx05	28	Both companies have yet to fully demonstrate they can make the capital-intensive business of shale development work for a supermajor ' s needs read : dividends .	[]	()	set()	False							False
+cvx05	29	Chevron , however , would appear to have the edge in terms of taking those proved reserves and proving itself .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+cvx06	0	Chevron ' s Debt Fell in 4Q17 : What to Expect in 2018	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True	weak	y					False
+cvx06	1	Is Chevron Set to Grow in 2018 ?	['FinancialReport']	()	{'FinancialReport'}	True						y	False
+cvx06	2	Chevron ' s debt position compared to peers	[]	('Macroeconomics',)	{'Macroeconomics'}	True					y		True
+cvx06	3	In this series , we ' ll look at Chevron ' s CVX current financial position and growth prospects .	[]	()	set()	False							False
+cvx06	4	We ' ll begin with debt and cash flow analysis .	[]	()	set()	False							False
+cvx06	5	Then we ' ll look at the capex , segmental dynamics , and upstream growth path .	[]	()	set()	False							False
+cvx06	6	Let ' s look at CVX ' s debt position first .	[]	()	set()	False							False
+cvx06	7	Chevron ' s net debt-to-adjusted EBITDA ratio stood at 1.4 x in 4Q17 , below the average industry ratio of 1.6 x .	['FinancialReport', 'Financing']	('Financing', 'Macroeconomics')	{'Macroeconomics', 'FinancialReport'}	True	strong	y	y				True
+cvx06	8	The industry average takes into account 13 integrated energy companies worldwide .	[]	()	set()	False							False
+cvx06	9	Another parameter to compare debt is the total debt-to-total capital ratio .	[]	('Financing',)	{'Financing'}	True					y		True
+cvx06	10	In 4Q17 , CVX ' s total debt-to-total capital ratio stood at 21 % , again below the industry average of 36 % .	['FinancialReport', 'Financing']	('Financing', 'Macroeconomics')	{'Macroeconomics', 'FinancialReport'}	True				y	y		True
+cvx06	11	Chevron ' s net debt fell from $ 39.1 billion in 4Q16 to $ 33.9 billion in 4Q17 , which represents a 13 % YoY fall .	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True	(weak, strong)	y					False
+cvx06	12	Royal Dutch Shell ( RDS.A ) saw an 11 % YoY fall in net debt in 4Q17 .	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True							False
+cvx06	13	ExxonMobil ' s ( XOM ) net debt levels remained stable in the period .	['FinancialReport', 'Financing']	('FinancialReport', 'Financing')	set()	False							False
+cvx06	14	However , BP ( BP ) saw a rise in its net debt levels of 6 % YoY in 4Q17 .	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True							False
+cvx06	15	Analyzing Chevron ' s debt trend	[]	('Financing',)	{'Financing'}	True				y	y		True
+cvx06	16	CVX ' s net debt-to-adjusted EBITDA ratio fell from 2.6 x in 4Q16 to 1.3 x in 4Q17 .	['FinancialReport']	('Financing',)	{'Financing', 'FinancialReport'}	True				y	y		True
+cvx06	17	Before examining the trend , let ' s see why CVX ' s net debt fell .	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True							False
+cvx06	18	The fall in CVX ' s net debt was because of a steeper decline in total debt than the fall in cash and equivalents .	['FinancialReport', 'Investment', 'Financing']	('FinancialReport', 'Financing')	{'Investment'}	True	weak						False
+cvx06	19	Total debt fell by $ 7.4 billion from 4Q16 to $ 38.7 billion in 4Q17 .	['FinancialReport', 'Financing']	('Financing',)	{'FinancialReport'}	True							False
+cvx06	20	The fall in total debt was due to an increase in upstream earnings resulting from higher oil prices .	['FinancialReport', 'Macroeconomics', 'Profit/Loss', 'Financing']	('FinancialReport', 'Financing', 'Macroeconomics', 'Profit/Loss')	set()	False							False
+cvx06	21	Cash and equivalents fell by $ 2.2 billion from 4Q16 to $ 4.8 billion in 4Q17 .	['Investment', 'FinancialReport']	('FinancialReport',)	{'Investment'}	True							False
+cvx06	22	CVX ' s adjusted EBITDA rose in 4Q16 - - 4Q17 because of higher earnings in its upstream segment .	['Profit/Loss']	('FinancialReport', 'Profit/Loss')	{'FinancialReport'}	True							True
+cvx06	23	The rise in its adjusted EBITDA , along with a decrease in its net debt from 4Q16 to 4Q17 , led to a decline in Chevron ' s net debt-to-adjusted EBITDA multiple .	['FinancialReport', 'Financing', 'Profit/Loss']	('FinancialReport', 'Financing', 'Profit/Loss')	set()	False							False
+cvx06	24	What does Chevron ' s debt analysis imply ?	[]	()	set()	False							False
+cvx06	25	Chevron stands below the peer average for both the debt ratios we discussed above - - a favorable scenario .	['FinancialReport']	('Financing', 'Macroeconomics')	{'Financing', 'Macroeconomics', 'FinancialReport'}	True				y	y		True
+cvx06	26	Plus , CVX ' s total debt-to-capital ratio is the second-lowest among its peers , placing it in a comfortable leverage position that provides Chevron financial strength and flexibility to handle difficult times .	['FinancialReport', 'Macroeconomics', 'Financing']	('Financing', 'Macroeconomics')	{'FinancialReport'}	True	weak	y	y				False
+cvx06	27	Plus , CVX ' s net debt-to-EBITDA ratio has declined consistently since 4Q16 due to the rise in oil prices , which led to a surge in upstream earnings .	['FinancialReport', 'Profit/Loss']	('Financing', 'Macroeconomics', 'Profit/Loss')	{'Financing', 'Macroeconomics', 'FinancialReport'}	True					y		True
+cvx06	28	Going forward , if oil prices rise and Chevron implements its financial strategy of reducing costs , optimizing capex , and divesting non-core assets , then Chevron could see a further fall in its net debt-to-EBITDA ratio .	['Investment', 'Expense', 'Macroeconomics', 'FinancialReport']	('Expense', 'Financing', 'Macroeconomics')	{'Investment', 'Financing', 'FinancialReport'}	True	(weak, strong, strong)	y			y		True
+duk05	0	Duke Energy Says Some Customers May Be Affected by Data Breach	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+duk05	1	Duke Energy Corp . said Tuesday some of its customers may have been affected by a data breach revealed by PayPal Holdings Inc . last week .	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+duk05	2	On Friday , Tio Networks , which PayPal bought in July , said it had uncovered evidence of unauthorized access to its network that could have compromised personally identifiable information for roughly 1.6 million users .	['CSR/Brand', 'Merger/Acquisition']	('Merger/Acquisition',)	{'CSR/Brand'}	True	weak		y				False
+duk05	3	Among customer information possibly exposed , according to a PayPal spokesman , were names , addresses , bank account details , Social Security numbers and details of login information used to pay bills .	['CSR/Brand']	()	{'CSR/Brand'}	True	weak		y				False
+duk05	4	Duke said some 374,000 Duke Energy Carolinas customers who paid a bill by check or cash at one of its 550 authorized walk-in payment processing centers from 2008 through this year may have been affected by the breach .	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+duk05	5	Customers who paid by credit card were n't affected , Duke said .	[]	()	set()	False							False
+duk05	6	Last month , the payments firm suspended operations , pending a security review , of its TIO Networks unit .	['Product/Service', 'CSR/Brand']	()	{'Product/Service', 'CSR/Brand'}	True							False
+duk05	7	That company makes digital bill-payment tools for utilities and other firms and also operates a network of kiosks in physical retail stores .	[]	('Facility', 'Product/Service')	{'Facility', 'Product/Service'}	True					y		True
+duk05	8	Lesley Quick , Duke Energy ' s vice president of revenue services , said Tuesday the company has been in daily contact with the vendor since it ` ` abruptly and unexpectedly disabled their network on Nov . 10 for suspected ' security vulnerabilities .	['CSR/Brand', 'Facility']	('CSR/Brand',)	{'Facility'}	True							False
+duk05	9	' ' ' The company also said the breach could affect other companies using TIO Networks to process payments .	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+duk05	10	Shares in Duke were down 0.8 % to $ 87.90 near the end of regular trading Tuesday .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk05	11	PayPal was up 0.4 % at $ 71.24 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk06	0	Like Many of Its Peers , DUK Is Trading in the Oversold Zone	['Rating', 'SecurityValue']	('Rating',)	{'SecurityValue'}	True	strong	y		y			False
+duk06	1	According to technical analysts , a stock is considered to be trading in the oversold zone when its RSI falls below 30 .	[]	('Rating',)	{'Rating'}	True	strong	y		y	y		True
+duk06	2	It ' s considered to be trading in the overbought zone when its RSI rises above 70 .	[]	('SecurityValue',)	{'SecurityValue'}	True					y		True
+duk06	3	Extreme RSI levels may indicate an imminent reversal in the direction of a stock .	[]	()	set()	False							False
+duk06	4	Note that the stocks of most utility giants , such as NextEra Energy NEE , Southern Company SO , and Dominion Energy D , are currently trading in the oversold zone .	['Rating', 'SecurityValue']	('Rating',)	{'SecurityValue'}	True							False
+duk06	5	Short interest in Duke Energy stock rose a massive 20 % on December 15 , 2017 .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True							True
+duk06	6	According to a recent report , total shorted shares in DUK were 7.3 million on November 30 , 2017 , and this number rose to 8.5 million as of December 15 , 2017 .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True	weak		y				True
+duk06	7	An increase in short interest might mean that more investors are expecting a stock to fall from its current levels .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk06	8	Short interest is a measure that shows investor nervousness .	[]	('SecurityValue',)	{'SecurityValue'}	True							True
+duk06	9	Shares that are sold short and not yet covered back are represented as short interest .	[]	()	set()	False							False
+duk07	0	Duke Energy Stock Is at Its Most Oversold Level in 5 Years	['Rating', 'SecurityValue']	('Rating', 'SecurityValue')	set()	False							False
+duk07	1	Has Duke Energy Stock Turned Cheap after Its Recent Fall ?	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	2	Relative strength index	[]	()	set()	False							False
+duk07	3	Broader utilities ( XLU ) ( IDU ) have been falling almost every day so far in 2018 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	4	The second-largest utility by market cap , Duke Energy ( DUK ) , has been on a similar downtrend in this period .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+duk07	5	In the last month , DUK has fallen nearly 12 % .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	6	Duke Energy stock is currently trading deep in the oversold zone with an RSI relative strength index of 5 .	['Rating', 'SecurityValue']	('Rating', 'SecurityValue')	set()	False							False
+duk07	7	DUK has n't seen such oversold levels in the last five years .	['Rating', 'SecurityValue']	()	{'Rating', 'SecurityValue'}	True							False
+duk07	8	An RSI at such a low level could trigger a reversal in the stock ' s direction .	[]	()	set()	False							False
+duk07	9	Moving averages	[]	()	set()	False							False
+duk07	10	On January 18 , 2018 , Duke Energy stock was trading 10 % below its 50 - day and 200 - day moving averages .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	11	The huge discounts to both the stock ' s key moving averages suggest underlying weakness in the stock .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	12	The price level of ~ $ 85.5 could act as a resistance for Duke stock going forward .	[]	()	set()	False							False
+duk07	13	The stock may continue to trade weakly until it stays below its moving averages .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	14	It ' s currently trading at $ 77.3 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+duk07	15	Short interest	[]	('SecurityValue',)	{'SecurityValue'}	True							True
+duk07	16	Short interest in Duke Energy stock fell 6 % on December 29 , 2017 , according to a recent report .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True	strong		y				True
+duk07	17	The total number of shorted shares in DUK was 8.7 million on December 15 , and shorted shares fell to 8.1 million by December 29 , 2017 .	['FinancialReport']	('SecurityValue',)	{'FinancialReport', 'SecurityValue'}	True							True
+duk07	18	The fall in the stock ' s short interest could mean that fewer investors are expecting it to fall from its current level .	['FinancialReport', 'SecurityValue']	('SecurityValue',)	{'FinancialReport'}	True							False
+duk07	19	Short interest represents the total number of a company ' s shares that have been sold short and have n't yet been covered back .	[]	('SecurityValue',)	{'SecurityValue'}	True					y		True
+duk07	20	The metric tracks investor anxiety .	[]	()	set()	False							False
+f13	0	Ford Rolls Out a Hot Rod SUV as Drivers Abandon Performance Cars	['Product/Service', 'Macroeconomics']	('Macroeconomics', 'Product/Service')	set()	False							False
+f13	1	Edge ST aimed at buyers who once sought high-horsepower sedans	[]	()	set()	False							False
+f13	2	Automaker sees ` a pretty healthy business ' in souped-up SUVs	[]	()	set()	False							False
+f13	3	Ford Motor Co . has long souped up its sedans to satisfy customers looking for high performance .	[]	()	set()	False							False
+f13	4	Car demand is waning now but the need for speed is n't , so the automaker is rolling out a fresh hot rod that ' s a sign of the times : its first race-ready SUV .	['Product/Service', 'Macroeconomics']	('Macroeconomics', 'Product/Service')	set()	False							False
+f13	5	The ST edition of the Edge sport utility vehicle that Ford introduces Thursday in advance of the Detroit auto show is powered by a 335 - horsepower twin-turbo V - 6 engine , engineered on the track and styled to look ` ` sinister , ' ' said its designer Steve Gilmore .	['Product/Service']	('Product/Service',)	set()	False							False
+f13	6	` ` We shredded a lot of race tracks with this vehicle , ' ' Jonathan Crocker , the Edge ' s chief engineer , told reporters ahead of the reveal .	['Product/Service']	()	{'Product/Service'}	True	weak						False
+f13	7	If the idea of doing hot laps in the family hauler seems slightly absurd , welcome to the latest twist in the SUV craze .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f13	8	As U.S . car buyers continue their mass migration into utility vehicles , some are bringing along their preference for performance once sated by Taurus SHO sport sedans and Focus ST hot hatches .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f13	9	Now Ford , better known for muscling up its Mustang pony car , sees a new way to sell more high-profit SUVs .	['SalesVolume']	('Product/Service',)	{'Product/Service', 'SalesVolume'}	True	weak						True
+f13	10	More SUVs Ahead	[]	('Product/Service',)	{'Product/Service'}	True					y		True
+f13	11	` ` I would n't describe it as a niche , ' ' Raj Nair , head of Ford ' s North American operations , said in an interview .	[]	()	set()	False							False
+f13	12	` ` We see it as big enough to pursue some real engineering and some real unique parts .	[]	()	set()	False							False
+f13	13	For that to pay off , it needs to be a pretty healthy business . ' '	[]	()	set()	False							False
+f13	14	The Edge will be just the first in a series of hot rod SUVs Ford has coming , Nair said .	['Product/Service']	('Product/Service',)	set()	False							False
+f13	15	Analysts speculate the compact Escape and subcompact EcoSport will be next in line for the ST upgrade .	['Product/Service']	()	{'Product/Service'}	True							False
+f13	16	` ` People are running away from cars and they ' re running toward trucks and SUVs , ' ' said Karl Brauer , executive publisher of Cox Automotive Inc . brands including car-shopping website Autotrader and researcher Kelley Blue Book .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f13	17	` ` Why not have the performance elements of cars migrate to SUVs , too ? ' '	[]	()	set()	False							False
+f13	18	Fiat Chrysler Automobiles NV has already blazed the trail with SRT and R / T editions of its Dodge Durango large SUV and a Jeep Grand Cherokee that comes in a high-performance SRT package or a Trackhawk edition with a monstrous Hemi V - 8 engine .	['Product/Service']	('Macroeconomics', 'Product/Service')	{'Macroeconomics'}	True	weak		y				True
+f13	19	About 18 percent of Durango SUVs registered last year through October were SRT and R / T models , according to IHS Markit data .	[]	()	set()	False							False
+f13	20	Female Following	[]	()	set()	False							False
+f13	21	An understated mid-sized people mover , the Edge may seem an unlikely place for Ford to start spicing up its SUV line .	[]	('Product/Service',)	{'Product/Service'}	True					y		True
+f13	22	It attracts the largest female following among Ford ' s SUVs , with nearly half bought by women , the company said .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f13	23	Its primary competitor has been the smoothly styled Nissan Murano .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f13	24	But the Edge was in line for a styling facelift after a complete makeover a couple years ago .	['Product/Service']	()	{'Product/Service'}	True							False
+f13	25	So Ford decided to ditch the SUV ' s relatively tame Sport edition and give it the full ST treatment .	['Product/Service']	('Product/Service',)	set()	False							False
+f13	26	` ` We sold over 140,000 Edges last year , a fair portion of those were Edge Sports , but this really takes that to another level , ' ' Nair said .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f13	27	Besides its track-tested suspension and race-ready seats , the Edge ST ' s looks take a dark turn , with a honeycomb black gloss grill and matching 21 - inch shiny black rims with big red brake calipers peeking through .	['Product/Service']	()	{'Product/Service'}	True							False
+f13	28	The SUV ' s designer is not worried about turning off traditional buyers with the racing touches .	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+f13	29	` ` The female buyers are asking , ` Make it more aggressive , so I will feel more confident in this vehicle , ' ' ' Gilmore said .	[]	()	set()	False							False
+f13	30	Top-Heavy Tweaks	[]	()	set()	False							False
+f13	31	The engineers also had to overcome a challenge not associated with low-slug sedans - - top-heavy SUVs have a tendency to tip over if they fly through a corner too fast .	[]	()	set()	False							False
+f13	32	Ford tuned the Edge ST to compensate for its high ride by ` ` managing the all-wheel drive system and electronically creating a little bit of sportiness without getting ourselves into any issues on the center of gravity , ' ' Nair said .	[]	()	set()	False							False
+f13	33	` ` Consumers may not know how to drive a performance SUV versus a car , ' ' said Jeff Schuster , an analyst with researcher LMC Automotive .	[]	()	set()	False							False
+f13	34	` ` There probably needs to be some education so we do n't see people sitting on the side of their vehicle . ' '	[]	()	set()	False							False
+f13	35	The Edge ST goes on sale this summer , but Ford has n't revealed its price yet .	['Product/Service']	('Product/Service',)	set()	False							False
+f13	36	The Edge Sport it replaces starts at $ 40,675 and Cox ' s Brauer expects Ford to cash in on the upgrades .	['Product/Service', 'Profit/Loss']	('Product/Service',)	{'Profit/Loss'}	True							False
+f13	37	` ` SUV buyers traditionally have been willing to spend more money , ' ' Brauer said .	[]	()	set()	False							False
+f13	38	` ` Let ' s be honest , the massive shift toward SUVs and trucks allowed all the car companies to make more money selling fewer cars last year . ' '	['SalesVolume', 'Macroeconomics', 'Profit/Loss']	('Revenue', 'SalesVolume')	{'Macroeconomics', 'Revenue', 'Profit/Loss'}	True	(weak, weak, strong)	y					True
+f14	0	Ford Is The Next GE And Shorts Should Be Salivating	['Investment']	()	{'Investment'}	True							False
+f14	1	After writing extensively for Forbes on GE ' s plummet in the past few months , it was striking that both GE and Ford delivered negative guidance to the Street last Tuesday .	['FinancialReport', 'SecurityValue']	('FinancialReport', 'Macroeconomics', 'SecurityValue')	{'Macroeconomics'}	True	weak						True
+f14	2	Ford ' s truth bomb - - delivered at the Deutsche Bank Global Auto Industry Conference - - was particularly destructive .	[]	()	set()	False							False
+f14	3	Ford CFO Bob Shanks noted that 2018 earnings were likely to be in the range of $ 1.45 - $ 1.70 versus a preliminary read on 2017 EPS of $ 1.78 ( full results are due Wednesday . )	['FinancialReport', 'Profit/Loss']	('Profit/Loss',)	{'FinancialReport'}	True							False
+f14	4	So , in the midst of the Trump jump in the U.S . and data showing an increasing rate of growth in almost every other major global economy , Ford is predicting - - at the midpoint of its guidance range - - an EPS decline of 10 % in 2018 .	['Macroeconomics', 'Profit/Loss']	('FinancialReport', 'Macroeconomics', 'Profit/Loss')	{'FinancialReport'}	True					y		True
+f14	5	How does that happen ?	[]	()	set()	False							False
+f14	6	How can things be going so well in other sectors and not for Ford ?	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f14	7	According to Ford management , the problem - - much like the ones at GE - - is due to factors outside management ' s control .	[]	()	set()	False							False
+f14	8	Shanks used the phrase ` ` some of the unknowns or the unexpected ' ' to describe the negative impacts Ford is feeling from commodities and currencies .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f14	9	I have been listening to Ford conference calls for 25 years , beginning with my days as a cub analyst at Lehman in 1992 , and I am quite certain that Ford ' s cars and trucks have always been made from steel , aluminum and other metals , and that Ford has always transacted business in many countries , thus incurring currency risk .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+f14	10	So , why are commodities and currencies causing such an earnings shortfall now ?	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+f14	11	To be fair , Shanks started flagging increasing commodity prices as a risk to Ford ' s earnings in his comments on F ' s April 2017 earnings call , but what is Ford management doing to mitigate the impact of rising prices for metals , especially steel ?	['CSR/Brand', 'Macroeconomics', 'Profit/Loss']	('Macroeconomics',)	{'Profit/Loss', 'CSR/Brand'}	True							False
+f14	12	Not much .	[]	()	set()	False							False
+f14	13	This is Ford ' s official transcription of Shanks ' response to an analyst question at the DB conference :	[]	()	set()	False							False
+f14	14	` ` We do n't hedge as many because our analysis had indicated that there are some currencies that provide a natural hedge to a metal like copper in Australian dollar I think , tend to move in opposite directions .	['CSR/Brand', 'Macroeconomics']	()	{'Macroeconomics', 'CSR/Brand'}	True	weak		y				False
+f14	15	So we actually do n't hedge as much on currencies or commodities as a result .	['CSR/Brand']	()	{'CSR/Brand'}	True							False
+f14	16	What we have seen in more recent [ ph ] short time ( 01 : 04 : 00 ) is those natural hedges are going in the opposite direction , which are not working .	['CSR/Brand', 'Macroeconomics']	()	{'Macroeconomics', 'CSR/Brand'}	True							False
+f14	17	We ' re actually getting the bad news on the exchange , we ' re getting the bad news on commodities . ' '	['FinancialReport']	()	{'FinancialReport'}	True							False
+f14	18	Translation : our margins are suffering and we are not doing anything about it .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+f14	19	But is n't this just a pause as Ford transforms itself into a mobility company with leading positions in autonomous vehicles ( AVs ) and battery-electric vehicles ( BEVs ) ?	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f14	20	Based on the Deutsche Bank presentation ( available here ) , Ford has not yet flushed out its strategy for AVs and BEVs .	[]	()	set()	False							False
+f14	21	In fact , Ford would seem to be years behind its competition , especially crosstown rival General Motors .	['Macroeconomics']	()	{'Macroeconomics'}	True	strong						False
+f14	22	Read GM ' s masterful 91 - page manifesto on its strategy for AVs and BEVs ( available here ) and then read Ford ' s , and the message is clear .	[]	()	set()	False							False
+f14	23	In fact , it seems to me that the only hope remaining for Ford shareholders is yield support from the company ' s dividend .	['Dividend']	('Dividend',)	set()	False							False
+f14	24	If you read the preceding paragraphs and still want to own Ford shares for the long term , I applaud your courage and will congratulate you on receiving the company ' s recently declared special dividend of $ 0.13 in addition to your regular quarterly dividend of $ 0.15 % on March 1st .	['Dividend']	('Dividend',)	set()	False							False
+f14	25	That said , remember that GE also used to be a dividend stock .	[]	()	set()	False							False
+f14	26	Even now , with a current yield of 3 % GE is still yielding more than full percentage point more than the S & P 500 .	['Dividend']	('Dividend', 'Macroeconomics')	{'Macroeconomics'}	True							True
+f14	27	GE shares are also down 45 % in the past 12 months .	['SecurityValue']	('SecurityValue',)	set()	False							False
+f14	28	Am I saying that could happen to Ford shares ?	[]	()	set()	False							False
+f14	29	Yes .	[]	()	set()	False							False
+f14	30	If Ford earns $ 1.45 in 2018 - - the low end of CFO Shanks ' guidance range - - and the shares fall below their recent P / E of range of 6.5 - 7.5 x , then that that would put a downside valuation on F shares of $ 7.00 - $ 7.50 , or about 40 % below where they trade today .	['FinancialReport', 'SecurityValue', 'Profit/Loss']	('FinancialReport', 'SecurityValue')	{'Profit/Loss'}	True							False
+f14	31	In prior Forbes columns , I predicted Ford would be ` ` the worst stock of the year ' ' in 2015 and 2016 , and F shares massively underperformed the S & P 500 in both periods .	['Rating', 'SecurityValue']	('Macroeconomics', 'Rating')	{'Macroeconomics', 'SecurityValue'}	True	weak						True
+f14	32	This is is a slightly different call , though , I ' m looking for a sharp decline in Ford shares this year , not just relative underperformance , and that means F is an out-and-out short .	['Investment', 'Rating', 'SecurityValue']	('Rating', 'SecurityValue')	{'Investment'}	True	weak						False
+f14	33	You may want to hedge a Ford short with a long GM position to have exposure to a componay that actually has a fully-defined strategy for autonomous vehicles and electrified powertrains , but I do n't think you will need to .	['Investment']	()	{'Investment'}	True	weak						False
+f14	34	I believe that Ford shares are a better candidate for shorting now than at any time since the fall of 2008 .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True	weak	y					True
+f15	0	Ford Is At A Crossroad Of Danger And Opportunity In China	[]	()	set()	False							False
+f15	1	It is no secret that Ford is facing a minor crisis in China .	['Macroeconomics']	('CSR/Brand',)	{'Macroeconomics', 'CSR/Brand'}	True	strong	y			y		True
+f15	2	- - January sales were down 18 percent year-on-year . ( Sales at rival GM were up 15 percent )	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	3	- - Ford China CEO Jason Luo - in the position just 5 months - has resigned	['Employment']	('Employment',)	set()	False							False
+f15	4	- - Momentum outside of Lincoln has basically stalled , while partner tensions simmer .	['Deal']	()	{'Deal'}	True							False
+f15	5	All is not lost , however .	[]	()	set()	False							False
+f15	6	Ford leaders might be relieved to learn that the Chinese word for crisis is composed of two characters , 危 and 机 。	[]	()	set()	False							False
+f15	7	The first , wei , means danger .	[]	()	set()	False							False
+f15	8	The second , ji , means opportunity .	[]	()	set()	False							False
+f15	9	Negatives and positives reside side by side .	[]	()	set()	False							False
+f15	10	Ford ' s crisis , indeed , contains elements of both danger and opportunity .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f15	11	First , the dangers : Ford ' s China sales could continue to stall for months .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	12	Main culprit : Product offerings are getting old and the new metal will not arrive until the end of 2018 .	['Product/Service']	('Product/Service',)	set()	False							False
+f15	13	Ford ' s slump , which started in 2017 , also feels heavier because it contrasts with the 5 previous years of record growth .	['FinancialReport', 'Macroeconomics']	('SalesVolume', 'SecurityValue')	{'SalesVolume', 'Macroeconomics', 'FinancialReport', 'SecurityValue'}	True	weak	y					True
+f15	14	Between 2012 and 2016 , Ford doubled it sales to 1.2 million .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	15	What else is causing a feeling of foreboding ?	[]	()	set()	False							False
+f15	16	Vastly improved Chinese competitors like Geely and Great Wall are gobbling up fresh market share .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f15	17	In 2017 , Geely even outsold Ford .	['SalesVolume', 'Macroeconomics']	('SalesVolume',)	{'Macroeconomics'}	True							False
+f15	18	A conventional response would be to hold one ' s ground and wait for new vehicles .	[]	()	set()	False							False
+f15	19	Like an army unit under siege calling for backup .	[]	()	set()	False							False
+f15	20	This approach might have worked in the past .	[]	()	set()	False							False
+f15	21	But times have changed .	[]	()	set()	False							False
+f15	22	Chinese competitors pose a real danger .	['Macroeconomics']	()	{'Macroeconomics'}	True	strong						False
+f15	23	To regain strength , Ford must try bold new things .	[]	()	set()	False							False
+f15	24	Lucky for Ford , China provides fertile ground for experimentation - and opportunity .	[]	()	set()	False							False
+f15	25	Ford is already starting to shape a new and different kind of operation .	[]	()	set()	False							False
+f15	26	Two examples :	[]	()	set()	False							False
+f15	27	Electrics .	[]	()	set()	False							False
+f15	28	Ford surprised the industry when it announced a new joint venture with Zotye , a private electric vehicle maker .	['Deal']	('Deal',)	set()	False							False
+f15	29	Ford and Zotye will start producing their first EVs at the end of 2018 or early 2019 .	['Product/Service']	('Product/Service',)	set()	False							False
+f15	30	China leads the world in electric vehicle sales ( 777,000 in 2017 ) .	['SalesVolume', 'Macroeconomics']	('Macroeconomics',)	{'SalesVolume'}	True							False
+f15	31	Beijing technocrats want that number to reach 1 million this year and then zoom to 6 million by 2025 .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	32	An earlier , less nimble , version of Ford would have studied the various partner options for a couple of more years before settling on Zotye as a partner .	['Deal']	()	{'Deal'}	True	strong						False
+f15	33	Peter Fleet , president of Ford Asia Pacific , says we can take the electric vehicle projections to the bank .	[]	()	set()	False							False
+f15	34	` ` Their [ EV sales ] are going to be even bigger than you think , ' ' he says .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	35	` ` The government makes it clear they want [ their EV industry ] to have great , global success . ' '	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f15	36	Tech Titan Tie-Up .	[]	()	set()	False							False
+f15	37	In December , Chairman Bill Ford and CEO Jim Hackett traveled to the headquarters of Alibaba and signed an agreement with Jack Ma to explore new and inventive ways to deliver cars to customers .	['Deal']	('Deal',)	set()	False							False
+f15	38	Alibaba , the Amazon / Ebay of China , is the PRC ' s second most valuable company after Tencent .	['Macroeconomics']	()	{'Macroeconomics'}	True	strong						False
+f15	39	Getting together with Alibaba is important because it opens up direct channels to Chinese consumers and inventive ways to sell cars .	['Deal']	()	{'Deal'}	True	weak						False
+f15	40	Here are two other promising areas for Ford :	[]	()	set()	False							False
+f15	41	Smart Cities : Chinese cities are home to some of the worst traffic jams and air pollution on the planet .	[]	('Macroeconomics',)	{'Macroeconomics'}	True					y		True
+f15	42	Didi , the Uber of China , is working closely with major cities to improve overall traffic flows and transportation efficiencies .	['Deal']	('Deal',)	set()	False							False
+f15	43	Ford ' s new global clarion call - smart cars for smart cities - looks like a timely solution for China ' s problems .	[]	()	set()	False							False
+f15	44	Lincoln .	[]	()	set()	False							False
+f15	45	Chinese consumers bought an astounding 2.3 million luxury cars in 2017 .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	46	German automakers - Mercedes , BMW , Audi and Porsche - dominate with 80 % of the segment .	['SalesVolume', 'Macroeconomics']	('Macroeconomics',)	{'SalesVolume'}	True	weak						False
+f15	47	But Lincoln jumped its own sales up to 55,000 in 2017 , from 11,000 in 2015 .	['SalesVolume']	('SalesVolume',)	set()	False							False
+f15	48	Plenty of upside there .	[]	()	set()	False							False
+f15	49	Confronted with slumping sales , Ford is right to venture out and take risks .	['SalesVolume']	('Macroeconomics', 'SalesVolume')	{'Macroeconomics'}	True							True
+f15	50	More daring moves into the electric , ride-sharing and direct distribution arenas are the only way for the Blue Oval to prevail in China over the long term .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+f15	51	Ford needs to be a fundamentally different company in China - - there is no Ford F - 150 profit machine to lean on here .	['Profit/Loss']	()	{'Profit/Loss'}	True							False
+f15	52	So , Ford in China should heed its own advice as it steps into the fresh territory of electrics , autonomy and smart city transportation : Go Further .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+f15	53	Within a crisis reside the seeds of opportunity .	[]	()	set()	False							False
+jnj04	0	Johnson & Johnson Earnings : When Strong Is n't Strong Enough	[]	('Profit/Loss', 'Revenue')	{'Revenue', 'Profit/Loss'}	True	strong	y			y	y	True
+jnj04	1	When a stock is at all-time highs and sitting on major gains over the past year , it has to be perfect , not just on the surface but underneath as well .	['SecurityValue']	('SecurityValue',)	set()	False							False
+jnj04	2	Though Johnson & Johnson ( JNJ ) reported better-than-expected fourth-quarter earnings Tuesday morning and a strong 2018 outlook , there was enough for the market to nitpick .	['FinancialReport', 'Profit/Loss']	('FinancialReport',)	{'Profit/Loss'}	True	strong						False
+jnj04	3	Investors sent the stock down 3.1 % , to $ 143.56 , marking its largest decline since last April and making it the second-worst performer in the Dow Jones Industrial Average .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+jnj04	4	Not much has changed for the health-care conglomerate , analysts said , but there was enough for investors to take some profits .	['Profit/Loss']	()	{'Profit/Loss'}	True							False
+jnj04	5	` ` In this market , a company - - not just J & J - - needs to deliver clean , perfect quarterly results and guides , not just on the headline number but everything that goes into it , ' ' Glenn Novarro , an analyst at RBC Capital Markets , tells Barron ' s .	['FinancialReport']	()	{'FinancialReport'}	True							False
+jnj04	6	He still has an outperform rating on the stock .	['Rating']	('Rating',)	set()	False							False
+jnj04	7	Here are some of the issues : Operating margins for the quarter came in lighter than some expected , in part because of higher research-and-development spending that was offset by a lower tax rate .	['FinancialReport', 'Expense', 'Macroeconomics', 'Profit/Loss']	('Expense', 'Profit/Loss')	{'Macroeconomics', 'FinancialReport'}	True							False
+jnj04	8	For 2018 , the company said it expected about one percentage point of improvement in operating margins - - lighter than some investors were expecting , Novarro says .	['FinancialReport', 'Profit/Loss']	('Profit/Loss',)	{'FinancialReport'}	True	weak						False
+jnj04	9	Currency and tax reforms were a major driver for the strong results and full-year outlook .	['FinancialReport', 'Macroeconomics']	('FinancialReport',)	{'Macroeconomics'}	True	strong						False
+jnj04	10	But Leerink Partners analyst Danielle Antalffy says the company is not going to get credit for ` ` nonoperational ' ' guidance .	[]	()	set()	False							False
+jnj04	11	Plus , organic sales growth projections for this year , based on management ' s comments , suggested the momentum seen in the fourth quarter would n't continue at the same pace , even though J & J sees growth accelerating for the full-year , Antalffy says .	['FinancialReport', 'SalesVolume']	('FinancialReport', 'SalesVolume')	set()	False							False
+jnj04	12	Sales of the company ' s cancer drug Imbruvica were also lighter than expected ( $ 522 million instead of consensus expectations of $ 537 million ) .	['SalesVolume']	('FinancialReport', 'SalesVolume')	{'FinancialReport'}	True							True
+jnj04	13	Darzalex , another J & J cancer drug , had strong global sales , but that number masked a lighter showing in the U.S . that was offset by strength abroad .	['SalesVolume']	('SalesVolume',)	set()	False							False
+jnj04	14	Both are drugs that analysts think represent the company ' s future growth prospects .	[]	()	set()	False							False
+jnj04	15	Potential note for AbbVie ( ABBV ) : J & J cited increased uptake globally and higher market share , wrote Credit Suisse analyst Vamil Divan .	['SalesVolume', 'Macroeconomics']	('Macroeconomics',)	{'SalesVolume'}	True							False
+jnj04	16	Tony Butler , an analyst at Guggenheim Partners , also noticed several questions from analysts about potential generic competition for the company ' s blockbuster prostate-cancer drug Zytiga after a court invalidated its patent last week .	['Macroeconomics', 'Legal']	()	{'Macroeconomics', 'Legal'}	True	weak		y				False
+jnj04	17	` ` It could be a banana peel we slip on , but in the big scope of things , you have to shrug your shoulders , ' ' says Butler , who characterized the results as strong overall .	['FinancialReport']	()	{'FinancialReport'}	True							False
+jnj04	18	Lesson to companies : Strong outlooks built on lower taxes and favorable currency exchange rates may not be enough to cut it in this market .	['FinancialReport', 'Macroeconomics']	('Macroeconomics',)	{'FinancialReport'}	True	weak		y				False
+jnj05	0	Where ' s The Tylenol ?	[]	()	set()	False							False
+jnj05	1	J & J Disappoints And Frustrates	[]	()	set()	False							False
+jnj05	2	At first glance , Johnson & Johnson seemed to deliver the goods .	[]	()	set()	False							False
+jnj05	3	The health-care conglomerate unveiled fourth quarter financial results and full-year 2018 guidance early Tuesday that beat expectations .	['FinancialReport']	('FinancialReport',)	set()	False							False
+jnj05	4	During today ' s conference call , it also announced plans to immediately bring back $ 12 billion in overseas cash , taking advantage of the lower tax rate on repatriated earnings and cash under the new tax law .	['FinancialReport', 'Macroeconomics']	()	{'Macroeconomics', 'FinancialReport'}	True							False
+jnj05	5	But as the day progressed and analysts dug below the headline numbers , those results lost their shine , and investors headed for the exit .	['FinancialReport']	()	{'FinancialReport'}	True							False
+jnj05	6	Down 4.2 percent to end the day at $ 141.86 a share , J & J ' s stock was one of the Dow Jones Industrial Average ' s biggest laggards .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+jnj05	7	It ' s a reminder that in this market , if a stock is bouncing off an all-time high , having climbed 30 percent over the previous 12 months , it ca n't afford to miss the mark .	['SecurityValue']	('SecurityValue',)	set()	False							False
+jnj05	8	Strong quarterly results and guidance spurred by a positive currency impact and tax reform do n't cut it .	['FinancialReport', 'Macroeconomics']	('FinancialReport', 'Macroeconomics')	set()	False							False
+jnj05	9	At $ 1.74 , per-share , fourth quarter operating profit beat the $ 1.72 expected by analysts .	['FinancialReport', 'Profit/Loss']	('FinancialReport', 'Profit/Loss')	set()	False							False
+jnj05	10	Sales jumped 11.5 percent , spurred by pharmaceutical sales and last year ' s $ 30 billion acquisition of Swiss biotech giant Actelion .	['SalesVolume', 'Merger/Acquisition']	('Merger/Acquisition', 'SalesVolume')	set()	False							False
+jnj05	11	But profit margins came in lighter than expected .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+jnj05	12	Without the impact of a weaker U.S . dollar , global sales grew at a 9.4 percent clip .	['SalesVolume', 'Macroeconomics']	('Macroeconomics',)	{'SalesVolume'}	True	strong						False
+jnj05	13	Remove acquisitions and divestitures from the mix , and organic sales rose 4.2 percent .	['SalesVolume', 'Merger/Acquisition', 'Financing']	('Merger/Acquisition', 'SalesVolume')	{'Financing'}	True	strong						False
+jnj05	14	` ` . . . the story in 4Q is the surprisingly weak gross margin missed by - 300 bps with op ex management and a materially lower tax rate - 1,000 bps vs . consensus helping to drive the modest EPS beat , ' ' wrote Barclays analyst Geoffrey Meacham in a note published today .	['FinancialReport', 'Macroeconomics', 'Profit/Loss']	('FinancialReport', 'Profit/Loss')	{'Macroeconomics'}	True							False
+jnj05	15	` ` . . . We think that JNJ is poised to deliver a good 2018 , but we await a better entry point given the punchy valuation . ' '	['Rating']	()	{'Rating'}	True	weak						False
+jnj05	16	Headwinds continued to batter J & J ' s biggest-selling drug in the quarter .	['FinancialReport']	('Macroeconomics', 'SalesVolume')	{'SalesVolume', 'Macroeconomics', 'FinancialReport'}	True					y		True
+jnj05	17	Sales of the blockbuster inflammation therapy Remicade sagged 10.5 percent in the face of rising competition .	['SalesVolume', 'Macroeconomics']	('Macroeconomics', 'SalesVolume')	set()	False							False
+jnj05	18	Sales of Stelara , Invokana and other prominent drugs fell short of analyst expectations .	['SalesVolume']	('FinancialReport', 'SalesVolume')	{'FinancialReport'}	True					y		True
+jnj05	19	Adding to worries : the threat of generic competition facing J & J ' s blockbuster cancer therapy Zytiga after a court ruling last week invalidated its patent .	['Macroeconomics', 'Legal']	('Legal', 'Macroeconomics')	set()	False							False
+jnj05	20	As for J & J ' s full-year outlook , the company expects to earn between $ 8 a share and $ 8.20 a share this year , as sales climb 3.5 percent to 4.5 percent .	['SalesVolume', 'Profit/Loss']	('Profit/Loss', 'SalesVolume')	set()	False							False
+jnj05	21	But organic sales growth comes in at 2.5 percent to 3.5 percent for the current year .	['SalesVolume']	('SalesVolume',)	set()	False							False
+jnj05	22	J & J expects operating margins to expand this year .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+jnj05	23	It has also promised to spend more on research and development .	['Investment']	('Expense',)	{'Investment', 'Expense'}	True				y	y		True
+jnj06	0	What To Expect From Johnson & Johnson In 2018	[]	()	set()	False							False
+jnj06	1	We have created an interactive dashboard on Johnson & Johnson ' s expected financial performance in 2018 .	['FinancialReport']	('Product/Service',)	{'Product/Service', 'FinancialReport'}	True	strong						True
+jnj06	2	You can adjust the revenue and margin drivers to see the impact on the company ' s performance .	[]	()	set()	False							False
+jnj06	3	Overall , we forecast revenue growth of around 5 % and EPS of just under $ 8 for 2018 .	['Revenue', 'Profit/Loss']	('Profit/Loss', 'Revenue')	set()	False							False
+jnj06	4	We expect J & J ' s Pharmaceuticals revenue to grow by 8 % in 2018 , primarily led by oncology drugs , along with cardiovascular , metabolism & other drugs .	['Revenue']	('Revenue',)	set()	False							False
+jnj06	5	Within oncology , Imbruvica and Darzalex have seen solid growth of late , and we expect this trend to continue in 2018 .	['Revenue']	('FinancialReport',)	{'Revenue', 'FinancialReport'}	True	weak			y			True
+jnj06	6	In the Consumer Healthcare business , we expect revenues to grow in low-single-digits , as skin care revenue growth will likely offset any pressure on baby care and other revenues .	['Revenue']	('Revenue',)	set()	False							False
+jnj06	7	Note that baby care and other revenues have seen recent declines amid competition from private labels .	['Macroeconomics', 'Revenue']	('Macroeconomics', 'Revenue')	set()	False							False
+jnj06	8	Meanwhile , we forecast Medical Devices revenues to grow in low-single-digits .	['Revenue']	('Revenue',)	set()	False							False
+jnj06	9	The company saw a strong uptick in vision care sales in 2017 due to the AMO acquisition , and we expect the company to benefit from that in 2018 as well .	['SalesVolume', 'Merger/Acquisition']	('Merger/Acquisition', 'Profit/Loss', 'SalesVolume')	{'Profit/Loss'}	True							True
+jnj06	10	J & J ' s Net Income Margin has been around 26 % on average over the past few years , and we expect that to remain relatively steady in 2018 .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+jnj06	11	Given our revenue growth forecast , we forecast around 5 % growth in net income in 2018 to about $ 21 billion .	['FinancialReport', 'Profit/Loss']	('Profit/Loss', 'Revenue')	{'Revenue', 'FinancialReport'}	True	(strong, weak)	y			y		True
+jnj06	12	Our net income forecast of $ 21 billion translates into EPS of about $ 7.80 in 2018 .	['Profit/Loss']	('Profit/Loss',)	set()	False							False
+jnj06	13	We estimate a price-earnings multiple of around 19 for J & J , which is below many pharma industry multiples , reflecting the risk of biosimilars impacting the company ' s future growth .	['FinancialReport', 'Macroeconomics']	('SecurityValue',)	{'Macroeconomics', 'FinancialReport', 'SecurityValue'}	True							True
+jnj06	14	This translates into a price estimate of $ 149 for Johnson & Johnson ' s stock , which is around 15 % above the current market price .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True					y		True
+jnj06	15	What ' s behind Trefis ?	[]	()	set()	False							False
+jnj06	16	See How it ' s Powering New Collaboration and What-Ifs	[]	('Deal',)	{'Deal'}	True	strong				y		True
+nem04	0	Analyst Insight : Is Newmont Mining Warming Up for a Good 2018 ?	[]	()	set()	False							False
+nem04	1	Analyst ratings	[]	('Rating',)	{'Rating'}	True	strong				y		True
+nem04	2	Along with Agnico Eagle Mines ( AEM ) , Newmont Mining ( NEM ) has a high percentage of ` ` buy ' ' ratings among the senior miners at 61 % .	['Rating']	('Rating',)	set()	False							False
+nem04	3	39 % of the analysts that cover NEM have given it ` ` hold ' ' ratings .	['Rating']	('Rating',)	set()	False							False
+nem04	4	The stock does n't have any ` ` sell ' ' ratings .	['Rating']	('Rating',)	set()	False							False
+nem04	5	Its target price implies an upside of 11.6 % from its current market price of $ 38.3 .	['Rating', 'SecurityValue']	('Rating',)	{'SecurityValue'}	True	strong	y					False
+nem04	6	There has n't been much change in analysts ' ratings for NEM ' s stock in the last few months .	['Rating']	('Rating',)	set()	False							False
+nem04	7	In 2017 , apart from an upward revision in its unit costs for the next two years , the company has performed well overall .	['FinancialReport', 'Expense']	('Expense',)	{'FinancialReport'}	True	weak	y					False
+nem04	8	Upgrades	[]	('Rating',)	{'Rating'}	True	strong				y		True
+nem04	9	Newmont Mining ' s stock has not seen any rating change from analysts since July 2017 when Argus upgraded it from ` ` hold ' ' to ` ` buy ' ' with a target price of $ 43 .	['Rating']	('Rating',)	set()	False							False
+nem04	10	The firm ' s analyst had reasoned that the stock ' s valuation at the time was attractive and expected the company to benefit from the positive fundamentals of the gold industry ( GLD ) .	['Macroeconomics', 'SecurityValue']	('Macroeconomics', 'SecurityValue')	set()	False							False
+nem04	11	On June 15 , 2017 , Raymond James initiated coverage of NEM with an ` ` outperform ' ' rating and a target price of $ 43.00 .	['Rating']	('Rating',)	set()	False							False
+nem04	12	Raymond James was also bullish on Kinross Gold ( KGC ) , Agnico Eagle Mines ( AEM ) , Alamos Gold ( AGI ) , and Detour Gold ( DRGDF ) .	['Rating']	()	{'Rating'}	True	strong						False
+nem04	13	Recent rating changes	[]	('Rating',)	{'Rating'}	True					y		True
+nem04	14	BMO Capital Markets reiterated its ` ` buy ' ' rating on NEM on December 12 , 2017 .	['Rating']	('Rating',)	set()	False							False
+nem04	15	The firm has a target price of $ 43 on the stock .	['Rating']	('Rating',)	set()	False							False
+nem04	16	Similarly , Royal Bank of Canada ( or RBC ) Capital Markets also reaffirmed its ` ` hold ' ' rating on Newmont on December 5 , 2017 .	['Rating']	('Rating',)	set()	False							False
+nem04	17	On October 31 , 2017 , FBR & Co . reiterated its ` ` hold ' ' rating on NEM ' s stock with a target price of $ 40 .	['Rating']	('Rating',)	set()	False							False
+nem04	18	FBR analyst Lucas Pipes updated his estimates for the company after its 3Q17 results and updated 2017 guidance .	[]	('FinancialReport',)	{'FinancialReport'}	True					y		True
+nem04	19	TD Securities also reaffirmed its ` ` hold ' ' rating for Newmont ' s stock on October 19 , 2017 , with a target price of $ 42 .	['Rating']	('Rating',)	set()	False							False
+nem04	20	On the same day that TD Securities boosted its target price for NEM , Scotiabank also upped NEM ' s target price from $ 43.50 to $ 55.00 .	['Rating']	('Rating',)	set()	False							False
+nem04	21	Scotiabank had previously upgraded Newmont from ` ` sector perform ' ' to ` ` outperform ' ' on July 5 , 2017 .	['Rating']	('Rating',)	set()	False							False
+nem05	0	Newmont-Barrick Race for Top Gold Crown Comes Down to a Decimal	[]	('Macroeconomics',)	{'Macroeconomics'}	True					y		True
+nem05	1	Gold geeks will have to wait for Newmont Mining Corp . to disclose one more decimal place to see if it overtook Barrick Gold Corp . as the world ' s biggest bullion producer .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+nem05	2	On Wednesday , the Greenwood Village , Colorado-based company said it produced 5.3 million ounces of gold last year , essentially tying the output of Toronto-based Barrick , which last week reported 5.32 million ounces .	['Product/Service', 'Macroeconomics']	('FinancialReport',)	{'Product/Service', 'Macroeconomics', 'FinancialReport'}	True	weak		y				True
+nem05	3	Whether that ' s enough for it to squeak ahead of Barrick depends on the rounding .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+nem05	4	A spokesman for Newmont , Omar Jabara , said the more precise number will be given Thursday when the company posts fourth-quarter earnings and updates its production guidance .	['FinancialReport']	('FinancialReport',)	set()	False							False
+nem05	5	The last year Newmont produced more gold than Barrick was 2005 .	['Product/Service']	('FinancialReport',)	{'Product/Service', 'FinancialReport'}	True							True
+nem05	6	In 2006 , Barrick vaulted ahead after buying Placer Dome Inc . and has maintained an output lead ever since , although Newmont has moved well ahead by market value .	['Macroeconomics', 'Merger/Acquisition']	('Macroeconomics', 'Merger/Acquisition')	set()	False							False
+nem05	7	Newmont executives have increasingly been talking up the miner ' s growth prospects , a contrast to Barrick , which has spoken more about margin improvements and debt-reduction efforts .	['FinancialReport', 'Financing', 'Profit/Loss']	('FinancialReport', 'Financing', 'Profit/Loss')	set()	False							False
+nem05	8	Newmont has also stressed the need to reward shareholders with higher dividends , and on Tuesday doubled the quarterly payout to 14 cents .	['Dividend']	('Dividend',)	set()	False							False
+nem05	9	All of this may have helped Newmont shares outperform , widening the value gap between the two companies .	['Macroeconomics', 'Rating', 'SecurityValue']	('Macroeconomics', 'Rating', 'SecurityValue')	set()	False							False
+nem05	10	Newmont is pursuing greenfield exploration around the world and has added production with nine mine expansions in five years , as well as the purchase of the Cripple Creek & Victor mine in Colorado .	['Facility']	('Merger/Acquisition',)	{'Facility', 'Merger/Acquisition'}	True	strong	y	y		y		True
+nem05	11	All told , the company has added more than 2 million ounces of gold production , Goldberg told investors in December .	['Product/Service']	('FinancialReport',)	{'Product/Service', 'FinancialReport'}	True							True
+nem05	12	The midpoint of Newmont ' s current guidance suggests it will produce more gold than Barrick from 2018 to 2022 .	['Product/Service', 'Macroeconomics']	('FinancialReport',)	{'Product/Service', 'Macroeconomics', 'FinancialReport'}	True	weak				y		True
+nem06	0	Newmont Mining Is Investors ' Gold Stock to Buy	['Rating']	()	{'Rating'}	True	strong						False
+nem06	1	Gold mining stocks are not cheap , but if you want to own gold , Newmont Mining Corporation ( NEM ) is a good choice , as it best tracks the performance of Comex gold futures .	[]	()	set()	False							False
+nem06	2	Newmont is not cheap fundamentally , as its P / E ratio is 200.67 , and the dividend yield is anemic at 0.77 % .	['Dividend', 'Profit/Loss']	('Dividend',)	{'Profit/Loss'}	True	strong		y				False
+nem06	3	Investors should have 10 % of their portfolio invested in gold-related choices , and Newmont is one such choice .	['Investment']	()	{'Investment'}	True	strong						False
+nem06	4	The stock closed Tuesday at $ 38.39 , up 2.3 % year to date after falling into correction territory at its 2018 low of $ 35.98 on Feb . 9 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+nem06	5	Newmont shares are up 6.7 % since then .	['SecurityValue']	('SecurityValue',)	set()	False							False
+nem06	6	The stock peaked at $ 42.04 on Jan . 24 and is currently 8.7 % below that high .	['SecurityValue']	('SecurityValue',)	set()	False							False
+nem06	7	Analysts expect Newmont Mining to post earnings per share of 40 cents when it reports results before the opening bell on Thursday , Feb . 22 .	['FinancialReport', 'Profit/Loss']	('FinancialReport', 'SecurityValue')	{'SecurityValue', 'Profit/Loss'}	True					y		True
+nem06	8	Some analysts say that gold production should continue to improve in Africa and North America .	['Product/Service']	('FinancialReport',)	{'Product/Service', 'FinancialReport'}	True							True
+nem06	9	Meanwhile , copper is another metal mined by Newmont that is projected to have year-over-year gains .	['Profit/Loss']	('FinancialReport',)	{'Profit/Loss', 'FinancialReport'}	True	strong			y			True
+nem06	10	The daily chart for Newmont Mining shows that it has been above a ' ' golden cross ' ' since Aug . 10 , when the stock closed at $ 36.44 .	['SecurityValue']	('SecurityValue',)	set()	False							False
+nem06	11	A ` ` golden cross ' ' occurs when the 50 - day simple moving average rises above the 200 - day simple moving average , indicating that higher prices lie ahead .	['SecurityValue']	()	{'SecurityValue'}	True							False
+nem06	12	The horizontal lines show that the stock held its semiannual value level of $ 36.15 , when it held its 200 - day simple moving average of $ 36.20 .	['SecurityValue']	()	{'SecurityValue'}	True							False
+nem06	13	The stock is above its 50 - day simple moving average of $ 38.10 , with its monthly risky level at $ 40.76 .	['SecurityValue']	()	{'SecurityValue'}	True							False
+nem06	14	The weekly chart for Newmont Mining will be negative if the stock closes Friday just below its five-week modified moving average of $ 38.43 .	['FinancialReport', 'SecurityValue']	('SecurityValue',)	{'FinancialReport'}	True	weak						False
+nem06	15	The stock is above its 200 - week simple moving average at $ 29.06 , which is also the ` ` reversion to the mean , ' ' last tested during the week of April 15 , 2016 , when the average was $ 28.91 .	['SecurityValue']	()	{'SecurityValue'}	True	strong						False
+nem06	16	The 12 x 3 x 3 weekly slow stochastic reading is projected to end this week at 60.45 , down from 65.88 on Feb . 16 .	['FinancialReport']	()	{'FinancialReport'}	True							False
+nem06	17	Given these charts and analysis , investors should buy Newmont Mining shares on weakness to my semiannual value levels of $ 36.15 and reduce holdings on strength to my monthly risky level of $ 40.76 .	['Rating']	('SecurityValue',)	{'Rating', 'SecurityValue'}	True	strong	y					True
+wmt05	0	Walmart Stock Nears Key Support After Earnings Miss	['FinancialReport', 'SecurityValue', 'Profit/Loss']	('FinancialReport', 'SecurityValue')	{'Profit/Loss'}	True	strong			y			False
+wmt05	1	Walmart Inc . ( WMT ) shares have fallen more than 12 % since the beginning of the week after the company reported worse-than-expected fourth quarter financial results .	['FinancialReport', 'SecurityValue']	('FinancialReport', 'SecurityValue')	set()	False							False
+wmt05	2	Revenue rose 4.1 % to $ 136.3 billion - - beating consensus estimates by $ 1.39 billion - - but earnings per share hit only $ 1.33 and missed consensus estimates by four cents per share .	['FinancialReport', 'Revenue', 'Profit/Loss']	('FinancialReport', 'Profit/Loss', 'Revenue')	set()	False							False
+wmt05	3	The company ' s full-year profit guidance also came in at $ 4.75 to $ 5.00 per share , below expectations of $ 5.13 per share .	['FinancialReport', 'Profit/Loss']	('FinancialReport', 'Profit/Loss')	set()	False							False
+wmt05	4	Aside from the lackluster guidance , the company ' s e-commerce growth came in at just 23 % , which was sharply lower than the growth of roughly 40 % seen in past quarters .	['FinancialReport', 'Revenue']	('FinancialReport',)	{'Revenue'}	True	weak			y			False
+wmt05	5	Management primarily attributed the slower growth to the Jet.com acquisition that added scale but anticipates the growth rate to ramp back up to the 40 % range after the first quarter .	['Merger/Acquisition', 'Revenue']	('FinancialReport', 'Merger/Acquisition', 'SalesVolume')	{'SalesVolume', 'Revenue', 'FinancialReport'}	True	weak			y	y		True
+wmt05	6	Full-year e-commerce sales remain up 44 % versus the prior year .	['SalesVolume']	('SalesVolume',)	set()	False							False
+wmt05	7	From a technical standpoint , the stock broke down from trendline support earlier this month , rebounded to the pivot point and fell again to key support levels .	['SecurityValue']	('SecurityValue',)	set()	False							False
+wmt05	8	The relative strength index ( RSI ) appears oversold at 31.71 , but the moving average convergence divergence ( MACD ) remains in a bearish downtrend .	['FinancialReport', 'Rating']	('FinancialReport',)	{'Rating'}	True							False
+wmt05	9	These two technical indicators suggest that the stock could see some consolidation and a possible move even lower if the trend reverses in the longer term .	['SecurityValue']	('SecurityValue',)	set()	False							False
+wmt05	10	Traders should watch for some consolidation above trendline support levels after closing the gap dating back to mid-November .	['SecurityValue']	('Macroeconomics',)	{'Macroeconomics', 'SecurityValue'}	True							True
+wmt05	11	If the stock breaks down from these levels , it could reach the 200 - day moving average at around $ 86.21 or reaction lows at around $ 77.50 .	['FinancialReport', 'SecurityValue']	('SecurityValue',)	{'FinancialReport'}	True	weak						False
+wmt05	12	If the stock rebounds , traders should watch for a move to S1 support and the 50 - day moving average at around $ 100.00 on the upside .	['FinancialReport', 'SecurityValue']	('SecurityValue',)	{'FinancialReport'}	True							False
+wmt06	0	Goldman expects Wal-Mart ' s fortunes to improve alongside the consumer ’ s	[]	()	set()	False							False
+wmt06	1	Goldman Sachs upgraded Wal-Mart to buy and put the retail giant on its Conviction List	['Rating']	('Rating',)	set()	False							False
+wmt06	2	Goldman Sachs thinks 2018 will be a good year for consumers , which means it will also be a good year for Wal-Mart Stores Inc . .	[]	()	set()	False							False
+wmt06	3	Goldman upgraded Wal-Mart to buy from neutral and put the retail giant on its Conviction List .	['Rating']	('Rating',)	set()	False							False
+wmt06	4	Its price target was moved up $ 2 to $ 117 .	['Rating']	('Rating',)	set()	False							False
+wmt06	5	Wal-Mart shares are up 1.1 % in Thursday trading .	['SecurityValue']	('SecurityValue',)	set()	False							False
+wmt06	6	` ` We expect growth in disposable income to reaccelerate , helping to sustain a new plateau for consumption , with more consistent growth across verticals than we have noted in the recent low , stable growth phase of the recovery , ' ' wrote Goldman Sachs analysts .	['Macroeconomics', 'Revenue']	('Macroeconomics',)	{'Revenue'}	True	weak		y	y			False
+wmt06	7	` ` This forecast reflects accelerating wage and income dynamics , and additional help from tax reform . ' '	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+wmt06	8	Goldman expects tax reform to give the biggest boost to consumption capability to those whose returns reflect an adjusted gross income of $ 200,000 to $ 1 million .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+wmt06	9	But those in the $ 40,000 - to - $ 200,000 range should also feel a ` ` substantial ' ' impact .	[]	()	set()	False							False
+wmt06	10	Among the areas where Goldman thinks there will be year-over-year same-store sales increases are apparel , food and casual dining , ` ` and outright like-for-like declines at any point in the year only for department stores . ' '	['SalesVolume']	('SalesVolume',)	set()	False							False
+wmt06	11	Despite the largely bullish outlook , Goldman analysts leave room for risk , noting that retail is still vulnerable to disruption .	['FinancialReport', 'Macroeconomics']	()	{'Macroeconomics', 'FinancialReport'}	True							False
+wmt06	12	On Wednesday , Instinet analysts noted the impact that a delayed start to the tax return season could have on certain retailers .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+wmt06	13	Weather is also frequently cited by retail executives as a factor that can both help or hurt results .	[]	()	set()	False							False
+wmt06	14	The consumer sector has become more bullish since late summer , and upbeat holiday season results suggest that some of the hurdles that have faced brick-and-mortar and traditional retailers may be lessening .	['FinancialReport', 'Macroeconomics']	()	{'Macroeconomics', 'FinancialReport'}	True							False
+wmt06	15	Wal-Mart has the advantage of being ` ` very much in control of its own destiny , ' ' Goldman writes .	[]	()	set()	False							False
+wmt06	16	` ` The firm ' s strategic positioning remains compelling - - selling consumables to middle-income consumers in small markets , ' ' the note said .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+wmt06	17	Among the key downside risks analysts highlight are competition from Amazon.com Inc . , discounters and traditional grocers .	['Macroeconomics']	('Macroeconomics',)	set()	False							False
+wmt06	18	Last week , Wal-Mart said it would use savings from the new tax reform law to offer a series of new associate benefits , including a raise in the minimum wage to $ 11 and bonuses of up to $ 1,000 , and expanded maternity and parental leave allowances .	['Employment', 'Macroeconomics']	('Employment',)	{'Macroeconomics'}	True							False
+wmt06	19	Wal-Mart is expected to announce fourth-quarter earnings on Feb . 20 .	['FinancialReport', 'Profit/Loss']	()	{'Profit/Loss', 'FinancialReport'}	True							False
+wmt06	20	The company ' s stock is up 21 % for the last three months while the Dow Jones Industrial Average is up 12.8 % for the period .	['SecurityValue']	('SecurityValue',)	set()	False							False
+wmt07	0	Walmart ' s Meal Kits Are Not The Solution To Fight Amazon	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+wmt07	1	The nation ' s largest food retailer announced this morning that it would roll out its own version of meal-kits to 2,000 of its stores this year .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	2	Currently Walmart offers the kits , which retails from $ 8 to $ 15 and serves two people , in more than 250 stores .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	3	Speculation in early February by Gabelli & Co . analyst Matthew Trusz was that Walmart was looking to acquire Blue Apron actually raised the troubled company ' s stock price by almost 7 percent on February 2nd ; but it appears that Walmart has decided to enter the meal kit business on its own ( at least for now ) .	['Macroeconomics', 'Merger/Acquisition', 'SecurityValue']	('Macroeconomics', 'Merger/Acquisition', 'SecurityValue')	set()	False							False
+wmt07	4	According to Nielsen ' s latest report just released today , The Meal Kit Opportunity , while the majority of meal kits are purchased from online subscription services , in-store meal kit sales grew rapidly in the past year , up 26.5 % to $ 154.6 million in sales , posting growth of more than 26 % year-over-year .	['SalesVolume']	('SalesVolume',)	set()	False							False
+wmt07	5	Overall , the report states , 9 % of Americans say they ' ve purchased a meal kit in the last six months and 25 % of consumers say they would consider trying a meal kit in the next six months .	['SalesVolume']	()	{'SalesVolume'}	True	weak						False
+wmt07	6	In December of 2017 , USDA published a report on Millenials eating and food purchasing habits and found that this generation , which now makes up roughly 26 percent of the total US population , eat out more frequently than other generations , spend more on prepared foods that require minimal preparation , spend less time preparing food at home and spend less money on foods to consume at home .	[]	()	set()	False							False
+wmt07	7	The report also found that nearly two-thirds of Millenials purchased prepared foods from limited service restaurants every week .	['SalesVolume']	()	{'SalesVolume'}	True							False
+wmt07	8	Tyler Lehr Walmart ' s senior vice president of Deli Services said in the statement announcing the roll out of the program that ` ` more than 80 percent of Americans do n't know what they will have for dinner tonight .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	9	Scrambling to find a meal ` ` puts pressure on a family . ' '	[]	()	set()	False							False
+wmt07	10	Walmart ' s roll out also includes fresh One Step Meals that only require heating - - which may have even a larger potential than their Meal Kits .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	11	While Blue Apron , Hello Fresh , Martha & Marley and dozens of other DYI food kits tout that consumers enjoy the assembly process and how their kits make it so easy for the home cook to excel ; many people say they have already become bored with having to unpack all the ingredients and do all the preparation ; many also complain about the wasteful packaging that is required both in shipping and individually packaging each ingredient .	['CSR/Brand']	('CSR/Brand',)	set()	False							False
+wmt07	12	Supermarkets across the nation have rushed to offer meal kits in their sotes that eliminate the extra packaging required for shipping and the need to pre-order multiple meals which in some cases are delivered in three days .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	13	In 2005 ` ` meal assembly stores ' ' were all the rage and according to the now defunct Easy Meal Preparation Association there were over 1,400 of these stores throughout the US .	['Macroeconomics']	()	{'Macroeconomics'}	True	weak						False
+wmt07	14	Today Dream Dinners is one of the few chains to survive with 75 locations in 22 states .	['Macroeconomics']	('Facility',)	{'Facility', 'Macroeconomics'}	True					y		True
+wmt07	15	Which makes one wonder if the Meal Kit trend might find itself in the same position .	['Macroeconomics']	()	{'Macroeconomics'}	True							False
+wmt07	16	Walmart ' s strategy comes on the heels of Amazon announcement that it will be delivering its own prepared foods and meal kits from its Whole Foods stores .	['Product/Service']	('Product/Service',)	set()	False							False
+wmt07	17	While both companies have publicly said they are fierce competitors , this move by Walmart brings meal kits and prepared foods to a less affluent and larger base shopper than those who shop at Whole Foods .	['Product/Service', 'Macroeconomics']	('Macroeconomics',)	{'Product/Service'}	True							False
+wmt07	18	It would not be surprising to also see these type of offerings start appearing in hipper packaging as they are a perfect fit for Walmart ' s Jet.com business , which already sells a wide variety of Omaha Steak meat , seafood and side dish products .	['Product/Service']	()	{'Product/Service'}	True	strong						False

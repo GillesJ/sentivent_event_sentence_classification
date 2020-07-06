@@ -5,36 +5,29 @@ sentivent_event_sentence_classification
 12/18/19
 Copyright (c) Gilles Jacobs. All rights reserved.  
 """
-import matplotlib.pyplot as plt
-from simpletransformers.classification import MultiLabelClassificationModel
 import pandas as pd
 import numpy as np
+from collections import Counter
 from pathlib import Path
 import settings
 from ast import literal_eval
 import json
+from sklearn.metrics import label_ranking_average_precision_score, label_ranking_loss
+from sklearn.dummy import DummyClassifier
 import operator
+from ast import literal_eval
 from functools import reduce
 from sklearn.model_selection import GroupKFold
 
-
-def train_eval(train_df, eval_df, output_dirp):
+def train_eval_dummy(dummy_strategy, train_df, eval_df, output_dirp):
     """
-    Train and eval test a model
+    Train and eval test a dummy model
     :param train_df:
     :param eval_df:
     :param output_dirp:
     :return:
     """
     print(train_df.head())
-
-    # Define model
-    model = MultiLabelClassificationModel(
-        settings.MODEL_SETTINGS["model_type"],
-        settings.MODEL_SETTINGS["model_name"],
-        num_labels=num_labels,
-        args=settings.MODEL_SETTINGS["train_args"],
-    )
 
     # Write train
     Path(output_dirp).mkdir(parents=True, exist_ok=True)
@@ -48,48 +41,52 @@ def train_eval(train_df, eval_df, output_dirp):
     eval_df.to_csv(eval_fp, sep="\t", index=False)
     eval_df = pd.read_csv(eval_fp, sep="\t", converters={"labels": literal_eval})
 
-    # Set tensorflow_dir in model args to run dir
-    model.args["tensorboard_dir"] = Path(output_dirp) / "tensorboard/"
-    model.args["cache_dir"] = (
-        Path(output_dirp) / "cache/"
-    )  # to ensure no weights are shared
-    model.args["output_dir"] = output_dirp  # is redundant
+    # Dataframe to sklearn matrix
+    X_train = np.random.rand(train_df["text"].shape[0],) # random dummy data with same shape as train
+    X_eval = np.random.rand(eval_df["text"].shape[0],) # random dummy data with same shape as train
+    y_train = np.array(train_df["labels"].to_list()) # train labels in multihot np.array
+    y_eval = np.array(eval_df["labels"].to_list()) # eval labels in multihot np.array
+
+    # Define model
+    if dummy_strategy == "constant":
+        c = Counter(np.apply_along_axis(lambda x: str(x.tolist()), 1, y_train).tolist())
+        most_freq_nn = next(x[0] for x in c.most_common() if "1" in x[0])
+        most_freq_nn = np.array(literal_eval(most_freq_nn))
+        model = DummyClassifier(strategy=dummy_strategy, constant=most_freq_nn, random_state=settings.RANDOM_STATE)
+    else:
+        model = DummyClassifier(strategy=dummy_strategy, random_state=settings.RANDOM_STATE)
 
     # Train the model
-    print(f"Training model with args: {model.args}")
-    model.train_model(train_df, output_dir=output_dirp)
+    print(f"Training dummy model with strategy: {dummy_strategy}")
+    model.fit(X_train, y_train)
 
     # Evaluate the model on eval set
-    result, model_outputs, _ = model.eval_model(eval_df)
+    y_pred = model.predict(X_eval)
+    print(y_pred)
+    result = {
+        "LRAP": label_ranking_average_precision_score(y_eval, y_pred),
+        "eval_loss": label_ranking_loss(y_eval, y_pred),
+    }
 
     # Write model result and outputs
-    eval_df["y_pred"] = model_outputs.tolist()
+    eval_df["y_pred"] = y_pred.tolist()
     predictions_fp = Path(output_dirp) / "testset_with_predictions.tsv"
     eval_df.to_csv(predictions_fp, sep="\t", index=False)
 
     with open(Path(output_dirp) / "result.json", "wt") as result_out:
         json.dump(result, result_out)
 
-    return result, model_outputs
-
+    return result
 
 pd.options.mode.chained_assignment = None
-modelname = f"{settings.MODEL_SETTINGS['model_name']}_epochs-{settings.MODEL_SETTINGS['train_args']['num_train_epochs']}"
+
+# SET DUMMY STRATEGY
+dummy_strategy = "constant" # options are stratified, prior, uniform, constant (named param constant has to be passed)
+modelname = f"DUMMY-{dummy_strategy}"
 
 # Load full dataset
 dataset_fp = Path(settings.DATA_PROCESSED_DIRP) / "dataset_event_type.tsv"
 dataset_df = pd.read_csv(dataset_fp, sep="\t", converters={"labels": literal_eval})
-
-# max token seq
-def tok_cnt(s):
-    return len(s.split())
-
-
-# Check token length 1 x 149 tokens: higher than 90 tokens are outliers and their sequence length can be truncated. 128 seq_len is more than enough
-# dataset_df["token_cnt"] = dataset_df.text.map(tok_cnt)
-# max_tok = sorted(dataset_df["token_cnt"].tolist(), reverse=True)
-# hist = dataset_df["token_cnt"].hist(bins=20)
-# plt.savefig(Path(settings.MODEL_DIRP) / "token_cnt_hist.svg")
 
 # Train and Evaluation data needs to be in a Pandas Dataframe containing at least two columns, a 'text' and a 'labels' column. The `labels` column should contain multi-hot encoded lists.
 dev_df = dataset_df[dataset_df["dataset"] == "silver"]
@@ -99,7 +96,7 @@ num_labels = len(dev_df["labels"][0])
 
 # Create a MultiLabelClassificationModel
 print(
-    f"Cross-validating across {settings.N_FOLDS} folds with model:\n{settings.MODEL_SETTINGS}"
+    f"Cross-validating across {settings.N_FOLDS} folds with model:\nDUMMY"
 )
 
 experiment_dirp = Path(settings.MODEL_DIRP) / modelname
@@ -130,7 +127,7 @@ experiment_df = experiment_df.append(
 )
 
 # Make KFolds and collect fold splits
-group_kfold = GroupKFold(n_splits=settings.N_FOLDS, )
+group_kfold = GroupKFold(n_splits=settings.N_FOLDS)
 groups = dev_df["document_id"].to_numpy()
 X = dev_df["text"].to_numpy()
 y = dev_df["labels"].to_numpy()
@@ -166,7 +163,7 @@ for index, row in experiment_df.iterrows():
     print(
         f"{run_name.upper()}: {train_df.shape[0]} train inst. and {eval_df.shape[0]} eval inst."
     )
-    result, model_outputs = train_eval(train_df, eval_df, run_dirp)
+    result = train_eval_dummy(dummy_strategy, train_df, eval_df, run_dirp)
 
     # collect result
     print(f"{run_name.upper()}: {result}")
@@ -197,10 +194,6 @@ print(f"Holdout score: {results_df.loc['holdout', 'result_train']}")
 # Write experiment results
 results_fp = experiment_dirp / "results.tsv"
 results_df.to_csv(results_fp, sep="\t")
-
-# write model settings
-with open(experiment_dirp / "model_settings.json", "wt") as ms_out:
-    json.dump(settings.MODEL_SETTINGS, ms_out)
 
 print(
     f"Crossvalidation and holdout testing finished. All results and metadata in {experiment_dirp}"

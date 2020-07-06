@@ -26,6 +26,12 @@ Now install TensorFlow
 Now run the Tensorboard command on the run dir which was created during training:
 `tensorboard`
 
+## Utility
+- Remove large output files: checkpoints and epoch binaries (DELETES BACKUP)
+1. Change to experiment dir: `cd RUNDIR`
+2. Check what you are removing `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec echo "{}" \;`
+3. Remove it `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec rm -r "{}" \; -prune`
+
 ## Experiment requirements:
 ### Initial test-run:
 **Test-run goal**:
@@ -88,21 +94,21 @@ Reporting: Load each folder
 
 # Experiment results
 
-Roberta-large:
+###Roberta-large:
 - 6 epochs:
 Crossvalidation score: {'eval_loss': 0.00614539818296748, 'LRAP': 0.9972541923792937}
 Holdout score: {'LRAP': 0.8745366615430941, 'eval_loss': 0.12979916081978723}
 
 - 8 epochs: 2020-01-06_14-41-59-roberta-large: BEST
-
 - 2020-01-07_12-14-25-roberta-large: 4 epochs WORST
  {"model_type": "roberta", "model_name": "roberta-large", "train_args": {"reprocess_input_data": true, "overwrite_output_dir": true, "num_train_epochs": 4, "n_gpu": 1}}
     holdout {'LRAP': 0.4904404584329125, 'eval_loss': 0.22251000754780823}	../models/2020-01-07_12-14-25-roberta-large/holdout
     all_fold_mean {'eval_loss': 0.1659443878521259, 'LRAP': 0.6338597185519774}
     -> way worse than 8 epochs (current best) DELETED
-- Roberta large 16 epochs: {"LRAP": 0.8505341862940574, "eval_loss": 0.215741140900978}: 8 is better
+- Roberta large 16 epochs: {"LRAP": 0.8505341862940574, "eval_loss": 0.215741140900978}: 8 is better on holdout
+- Roberta large 24 epochs: 
 
-Albert-xxlarge-v2:
+###Albert-xxlarge-v2:
 - 4 epochs: TOO LITTLE {'LRAP': 0.4919080370097837, 'eval_loss': 0.21860242708698735}	../models/2019-12-29_21-07-10-albert-xxlarge-v2/holdouttest_predictions.tsv	holdouttest
 - 8 epochs: 11	{'LRAP': 0.6902371653891292, 'eval_loss': 0.3356399894538489}	../models/2019-12-26_22-35-33-albert-xxlarge-v2/holdouttest_predictions.tsv	holdouttest DELETED DIR
 - 16 epochs: 11	{'LRAP': 0.7661070806622629, 'eval_loss': 0.40053606477494424}	../models/2019-12-29_21-06-28-albert-xxlarge-v2/holdouttest_predictions.tsv	holdouttest
