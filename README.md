@@ -75,13 +75,13 @@ all_fold_mean	{'eval_loss': 0.007836045015857104, 'LRAP': 0.9948021266208709}	PR
 
 ## Mirrors
 This source code repo:
-WAN:
-- https://github.com/GillesJ/sentivent_event_sentence_classification
+- WAN:
+  - https://github.com/GillesJ/sentivent_event_sentence_classification
 
-LAN:
-- gillesLatitude: ~/repos/
-- weoh: ~/
-- shares: lt3_sentivent
+- LAN:
+  - gillesLatitude: ~/repos/
+  - weoh: ~/
+  - shares: lt3_sentivent
 
 Dataset export:
 - gillesLatitude + weoh + shares in  this repo @ `data/raw/XMI-SENTiVENT-event-english-1.0-clean_2019-12-11_1246.zip`
