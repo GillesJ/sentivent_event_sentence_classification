@@ -83,5 +83,8 @@ This source code repo:
   - weoh: ~/
   - shares: lt3_sentivent
 
-Dataset export:
+All trained models + results files
+- lt3_sentivent share `models/`
+
+Dataset export used for experiments:
 - gillesLatitude + weoh + shares in  this repo @ `data/raw/XMI-SENTiVENT-event-english-1.0-clean_2019-12-11_1246.zip`
