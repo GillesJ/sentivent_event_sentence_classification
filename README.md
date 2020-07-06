@@ -15,15 +15,9 @@ Reporting: Load each folder with predictions, parse them > summarize and rank
 7. `Rank_models.py`: utility script to compare scores across trained models.
 8. `write_qa.py`: helper script to produce/parse annotated qualitative error analysis.
 
-#### Repo contents
-- `data/raw`: Location of unzipped WebAnno-exported project folder in UIMA XMI CAS format here.
-- `src/multilabel_xval.py`: Main experiment crossvalidation + test code. Produces trained models, results and predictions for each fold and final dev-test split.
-- `src/multilabel_classification.py`: DEPRECATED prototype code for train-test
-
-## Install
+## Install (without Pipfile)
 This depends on the package [SimpleTransformers](https://github.com/ThilinaRajapakse/simpletransformers).
-
-`pipenv install --python 3.7.5 simpletransformers torch pandas`
+`pipenv install --python 3.7.5 simpletransformers torch pandas sklearn`
 
 ## Available multilabel models:
 MODEL_CLASSES = {
@@ -35,7 +29,13 @@ MODEL_CLASSES = {
             'albert':     (AlbertConfig, AlbertForMultiLabelSequenceClassification, AlbertTokenizer)
 }
 
-##Tensorboard for checking loss and accuracy
+## Utility commands
+- Remove large output files: checkpoints and epoch binaries.
+1. Change to experiment dir: `cd RUNDIR`
+2. Check what you are removing `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec echo "{}" \;`
+3. Remove it `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec rm -r "{}" \; -prune`
+
+#### Tensorboard for checking loss and accuracy
 You need to install Tensorflow to use Tensorboard on your client (simpletransformers actually uses the PyTorch-fork tensorboardx for its tensorboard output and does not depend on TF.):
 First install a python version compatible with TF (latest=3.7.5 as of writing):
 `pyenv install 3.7.5`
@@ -44,13 +44,7 @@ Now install TensorFlow
 Now run the Tensorboard command on the run dir which was created during training:
 `tensorboard`
 
-## Utility commands
-- Remove large output files: checkpoints and epoch binaries.
-1. Change to experiment dir: `cd RUNDIR`
-2. Check what you are removing `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec echo "{}" \;`
-3. Remove it `find . \( -name "epoch*" -or -name "checkpoint*" \) -exec rm -r "{}" \; -prune`
-
-# Experiment results
+# Experiment results notes (incomplete)
 ###Roberta-large:
 - 6 epochs:
 Crossvalidation score: {'eval_loss': 0.00614539818296748, 'LRAP': 0.9972541923792937}
@@ -74,3 +68,20 @@ Holdout score: {'LRAP': 0.8745366615430941, 'eval_loss': 0.12979916081978723}
 DistilRoberta-base:
 -  4 epochs: holdout	{'LRAP': 0.8399741222178314, 'eval_loss': 0.123979330349427}	../models/2020-01-07_12-18-42-distilroberta-base/holdout
 all_fold_mean	{'eval_loss': 0.007836045015857104, 'LRAP': 0.9948021266208709}	PRETTY GOOD
+
+## Contact
+- Gilles Jacobs: gilles@jacobsgill.es, gilles.jacobs@ugent.be
+- Veronique Hoste: veronique.hoste@ugent.be
+
+## Mirrors
+This source code repo:
+WAN:
+- https://github.com/GillesJ/sentivent_event_sentence_classification
+
+LAN:
+- gillesLatitude: ~/repos/
+- weoh: ~/
+- shares: lt3_sentivent
+
+Dataset export:
+- gillesLatitude + weoh + shares in  this repo @ `data/raw/XMI-SENTiVENT-event-english-1.0-clean_2019-12-11_1246.zip`
