@@ -1,11 +1,24 @@
 # SENTiVENT Event Sentence Classification
-Sentence-level event classification experiments for the SENTiVENT Event dataset.
-Baseline experiments meant for SENTiVENT Event Data manuscript submission.
+Multilabel sentence-level event classification experiments for the SENTiVENT Event dataset.
+Pilot study experiments meant for SENTiVENT Event Data manuscript submission.
 
 ## Usage:
 Train-test-time output: Each train-test set and model is written to its model dir
 Reporting: Load each folder with predictions, parse them > summarize and rank
 
+1. Obtain dataset in WebAnno export format. Original dataset available upon request.
+2. Parse WebAnno export to .csv using `parse_to_processed` (requires `sentivent_webannoparser` dependency). Processed .csv data is placed in `data/processed`.
+3. Set model and run settings (i.e. folder locations, etc.) in `settings.py`.
+4. Run `multilabel_xval.py` to perform cross-validation hyperparametrization experiments on dev-set and train-holdout test on best hyperparametrization.
+5. Run `multilable_xval_dummy.py` to run dummy classifiers.
+6. Run `score_predictions.py` (set trained model dir in this file first) to compute performance metrics and produce summary files.
+7. `Rank_models.py`: utility script to compare scores across trained models.
+8. `write_qa.py`: helper script to produce/parse annotated qualitative error analysis.
+
+#### Repo contents
+- `data/raw`: Location of unzipped WebAnno-exported project folder in UIMA XMI CAS format here.
+- `src/multilabel_xval.py`: Main experiment crossvalidation + test code. Produces trained models, results and predictions for each fold and final dev-test split.
+- `src/multilabel_classification.py`: DEPRECATED prototype code for train-test
 
 ## Install
 This depends on the package [SimpleTransformers](https://github.com/ThilinaRajapakse/simpletransformers).
